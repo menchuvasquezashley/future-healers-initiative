@@ -14,206 +14,389 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f7fbfc;
+      background: #f6fbfc;
       color: #17324d;
       line-height: 1.6;
     }
 
     header {
       background: white;
-      padding: 20px 8%;
-      border-bottom: 1px solid #e5eeee;
+      padding: 18px 7%;
+      border-bottom: 1px solid #e4eeee;
     }
 
     header a {
-      color: #17324d;
       text-decoration: none;
+      color: #17324d;
       font-weight: bold;
     }
 
     .hero {
       text-align: center;
-      padding: 70px 8%;
-      background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
+      padding: 65px 8% 55px;
+      background: linear-gradient(135deg, #e5f6f7, #f7fbfc);
+    }
+
+    .emoji {
+      font-size: 4rem;
+      margin-bottom: 10px;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.35rem;
+      font-weight: normal;
+      margin-bottom: 18px;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 680px;
       margin: auto;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
     }
 
     main {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
-      padding: 55px 8%;
+      padding: 45px 7%;
     }
 
-    .section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 25px;
+    .tip {
+      background: #17324d;
+      color: white;
       border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
-
-    .section h2 {
-      margin-bottom: 12px;
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .skill {
-      padding: 15px;
-      background: #e8f7f7;
-      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 35px;
       text-align: center;
+    }
+
+    .tip strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin-bottom: 45px;
+    }
+
+    .career-card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .career-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .career-card p {
+      font-size: 0.95rem;
+    }
+
+    .challenge {
+      background: white;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      margin-bottom: 45px;
+    }
+
+    .challenge h2 {
+      margin-bottom: 10px;
+    }
+
+    .question {
+      background: #eef8f8;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px 0;
       font-weight: bold;
     }
 
-    .fhi {
-      background: #e8f7f7;
-      padding: 30px;
-      border-radius: 18px;
+    .answer {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #d9e8e8;
+      border-radius: 12px;
+      background: white;
+      cursor: pointer;
+      font-size: 1rem;
     }
 
-    .fhi ul {
+    .answer:hover {
+      background: #eef8f8;
+    }
+
+    #result {
+      margin-top: 18px;
+      font-weight: bold;
+    }
+
+    .timeline {
+      margin-bottom: 45px;
+    }
+
+    .timeline-item {
+      background: white;
+      border-left: 5px solid #8bbfc2;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 0 15px 15px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .coming-soon {
+      background: #e8f5f5;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .fhi-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      margin-bottom: 35px;
+    }
+
+    .fhi-box ul {
       margin: 15px 0 0 20px;
     }
 
-    footer {
+    .back {
       text-align: center;
-      padding: 30px;
+      margin-top: 35px;
+    }
+
+    .back a {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 12px;
       background: #17324d;
       color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #17324d;
+      color: white;
+      text-align: center;
+      padding: 28px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <a href="explore.html">← Back to Explore Healthcare</a>
-  </header>
+<header>
+  <a href="explore.html">← Back to Explore Healthcare</a>
+</header>
 
-  <section class="hero">
-    <h1>🩺 Surgeon</h1>
+<section class="hero">
+  <div class="emoji">🩺</div>
+  <h1>SURGEON</h1>
+  <h2>Could you see yourself in the OR?</h2>
+  <p>
+    Surgeons combine science, precision, problem-solving, teamwork, and
+    hands-on medicine to care for patients through surgical treatment.
+  </p>
+</section>
+
+<main>
+
+  <div class="tip">
+    <strong>🐀 Future Healer Tip</strong>
+    You don't have to know your specialty yet. Exploring is part of the process!
+  </div>
+
+  <h2 class="section-title">🔎 Get to Know the Career</h2>
+
+  <div class="career-grid">
+
+    <div class="career-card">
+      <h3>🔎 What They Do</h3>
+      <p>
+        Surgeons are physicians who diagnose and treat injuries, diseases,
+        and other conditions. They may perform operations as part of a
+        patient's treatment.
+      </p>
+    </div>
+
+    <div class="career-card">
+      <h3>🏥 Where They Work</h3>
+      <p>
+        Surgeons may work in hospitals, physicians' offices, surgical centers,
+        and other healthcare settings while working with a larger healthcare team.
+      </p>
+    </div>
+
+    <div class="career-card">
+      <h3>🎓 The Path</h3>
+      <p>
+        College → Medical School → Surgical Residency → Practice.
+        Some surgeons continue with fellowship training in a subspecialty.
+      </p>
+    </div>
+
+    <div class="career-card">
+      <h3>🧠 Skills</h3>
+      <p>
+        Problem-solving, communication, teamwork, precision, leadership,
+        organization, patience, and compassion all matter.
+      </p>
+    </div>
+
+  </div>
+
+  <section class="challenge">
+    <h2>🧩 Try the Surgeon Mindset</h2>
+
     <p>
-      Where science, problem-solving, teamwork, and hands-on medicine come together.
+      You aren't diagnosing a real patient here! This is just a quick
+      challenge to practice thinking like a healthcare professional.
+    </p>
+
+    <div class="question">
+      A patient arrives with a complicated injury. What should happen first?
+    </div>
+
+    <button class="answer" onclick="showResult('correct')">
+      A. Immediately decide on surgery
+    </button>
+
+    <button class="answer" onclick="showResult('correct')">
+      B. Assess the patient and gather information
+    </button>
+
+    <button class="answer" onclick="showResult('wrong')">
+      C. Choose a treatment based only on the symptoms
+    </button>
+
+    <div id="result"></div>
+  </section>
+
+  <section class="timeline">
+
+    <h2 class="section-title">⏰ A Day in the Life</h2>
+
+    <div class="timeline-item">
+      <h3>🌅 Morning</h3>
+      <p>
+        Surgeons may see patients, review cases, participate in rounds,
+        and prepare for procedures.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>🏥 During the Day</h3>
+      <p>
+        Their work can include procedures, operations, consultations,
+        patient care, and teamwork with other healthcare professionals.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>💬 Throughout the Day</h3>
+      <p>
+        Surgeons communicate with patients and families and coordinate
+        care with other members of the healthcare team.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>🌙 End of the Day</h3>
+      <p>
+        Documentation, follow-up care, and planning may all be part of
+        the job.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="coming-soon">
+    <h2>💬 Hear From a Real Surgeon</h2>
+
+    <p>
+      Coming soon! We hope to interview healthcare professionals so
+      Future Healers can learn about their experiences directly.
     </p>
   </section>
 
-  <main>
+  <section class="fhi-box">
+    <h2>🔬 Explore Surgery Through FHI</h2>
 
-    <div class="section">
-      <h2>What Do Surgeons Do?</h2>
-      <p>
-        Surgeons are physicians who diagnose and treat injuries, diseases,
-        and other conditions. They may perform operations to treat problems
-        such as injuries, tumors, and other conditions.
-      </p>
-    </div>
+    <p>
+      Want to explore surgery beyond reading about it?
+      FHI will create hands-on ways to experience different parts of healthcare.
+    </p>
 
-    <div class="section">
-      <h2>🏥 Where Do They Work?</h2>
-      <p>
-        Surgeons commonly work in hospitals, physicians' offices, and other
-        clinical settings. Their work involves collaborating with nurses,
-        physician assistants, other physicians, and many other healthcare
-        professionals.
-      </p>
-    </div>
+    <ul>
+      <li>🦴 Anatomy Challenges</li>
+      <li>🧩 Medical Mysteries</li>
+      <li>🔬 Future Surgery Workshops</li>
+      <li>👩‍⚕️ Healthcare Professional Interviews</li>
+    </ul>
+  </section>
 
-    <div class="section">
-      <h2>🎓 How Do You Become a Surgeon?</h2>
-      <p>
-        The path to becoming a surgeon takes many years of education and
-        training.
-      </p>
+  <section class="fhi-box">
+    <h2>🐀 FHI Checkpoint</h2>
 
-      <p style="margin-top: 15px;">
-        <strong>College → Medical School → Surgical Residency → Practice</strong>
-      </p>
+    <p>
+      You don't need to have your entire future figured out.
+      Start exploring, try something new, and keep learning.
+    </p>
+  </section>
 
-      <p style="margin-top: 15px;">
-        Physicians typically complete a bachelor's degree, followed by
-        medical school. After medical school, physicians complete residency
-        training in their chosen specialty. The length of residency depends
-        on the specialty, and some surgeons complete additional fellowship
-        training.
-      </p>
-    </div>
+  <div class="back">
+    <a href="explore.html">← Explore More Healthcare Careers</a>
+  </div>
 
-    <div class="section">
-      <h2>🧠 Skills You'll Use</h2>
+</main>
 
-      <div class="skills">
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Communication</div>
-        <div class="skill">Teamwork</div>
-        <div class="skill">Precision</div>
-        <div class="skill">Leadership</div>
-        <div class="skill">Organization</div>
-        <div class="skill">Patience</div>
-        <div class="skill">Compassion</div>
-      </div>
-    </div>
+<footer>
+  <p>Future Healers Initiative • Pre-Med Society</p>
+</footer>
 
-    <div class="section">
-      <h2>📅 What Can the Career Look Like?</h2>
-      <p>
-        A surgeon's work involves much more than performing operations.
-        Surgeons may examine patients, review test results, develop treatment
-        plans, communicate with patients and families, work with healthcare
-        teams, and provide follow-up care.
-      </p>
+<script>
+  function showResult(answer) {
+    const result = document.getElementById("result");
 
-      <p style="margin-top: 15px;">
-        Schedules can vary by specialty and workplace. Some surgeons work
-        long or irregular hours and may be on call.
-      </p>
-    </div>
-
-    <div class="fhi">
-      <h2>🔎 Explore Surgery Through FHI</h2>
-
-      <p>
-        Curious about what surgery is actually like? FHI will create
-        hands-on ways for students to explore the field.
-      </p>
-
-      <ul>
-        <li>🦴 Anatomy Challenges</li>
-        <li>🧩 Medical Mysteries</li>
-        <li>🔬 Future Surgery Workshops</li>
-        <li>👩‍⚕️ Healthcare Professional Interviews</li>
-      </ul>
-
-      <p style="margin-top: 20px;">
-        <strong>👩‍⚕️ Hear From a Surgeon — Coming Soon</strong>
-      </p>
-
-      <p>
-        We hope to eventually feature interviews and perspectives from
-        real healthcare professionals.
-      </p>
-    </div>
-
-  </main>
-
-  <footer>
-    <p>Future Healers Initiative • Pre-Med Society</p>
-  </footer>
+    if (answer === "correct") {
+      result.innerHTML =
+        "🩺 Good thinking! Before deciding on treatment, healthcare professionals need to assess the patient and gather information.";
+    } else {
+      result.innerHTML =
+        "💡 Not quite! Healthcare professionals need more information before deciding on a treatment.";
+    }
+  }
+</script>
 
 </body>
 </html>
