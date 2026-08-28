@@ -201,6 +201,59 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      .related {
+  margin: 50px 0 35px;
+  text-align: center;
+}
+
+.related h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.related > p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.related-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px 20px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+}
+
+.related-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.related-card h3 {
+  margin-bottom: 7px;
+}
+
+.related-card p {
+  font-size: 0.92rem;
+  margin-bottom: 15px;
+}
+
+.related-card span {
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0.65;
+}
     }
 
     footer {
@@ -374,9 +427,46 @@
     </p>
   </section>
 
-  <div class="back">
-    <a href="explore.html">← Explore More Healthcare Careers</a>
+  <section class="related">
+  <h2>🔎 Liked Surgery? Explore These Next</h2>
+  <p>There’s more than one path in healthcare. Check out some careers that connect to surgery.</p>
+
+  <div class="related-grid">
+
+    <div class="related-card">
+      <div class="related-icon">🚑</div>
+      <h3>Emergency Medicine</h3>
+      <p>Fast-paced care for patients who need urgent medical attention.</p>
+      <span>Coming Soon</span>
+    </div>
+
+    <div class="related-card">
+      <div class="related-icon">🎗️</div>
+      <h3>Oncology</h3>
+      <p>Caring for patients with cancer through treatment and ongoing care.</p>
+      <span>Coming Soon</span>
+    </div>
+
+    <div class="related-card">
+      <div class="related-icon">🧸</div>
+      <h3>Pediatrics</h3>
+      <p>Caring for infants, children, and teens.</p>
+      <span>Coming Soon</span>
+    </div>
+
+    <div class="related-card">
+      <div class="related-icon">🦴</div>
+      <h3>Orthopedic Surgery</h3>
+      <p>Treating conditions involving bones, joints, muscles, and movement.</p>
+      <span>Coming Soon</span>
+    </div>
+
   </div>
+</section>
+
+<div class="back">
+  <a href="explore.html">← Explore More Healthcare Careers</a>
+</div>
 
 </main>
 
