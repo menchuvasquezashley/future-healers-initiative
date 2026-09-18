@@ -3,753 +3,309 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Future Healers Initiative</title>
+<title>Future Healers Initiative | Pre-Med Society</title>
 
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f8fb;
+  color:#172b3a;
+  line-height:1.6;
 }
-
-body {
-font-family: Arial, sans-serif;
-background: #f7fbfc;
-color: #17324d;
-line-height: 1.6;
+nav{
+  background:#0d2942;
+  padding:15px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
 }
-
-header {
-background: white;
-padding: 18px 8%;
-border-bottom: 1px solid #e5eeee;
+.logo{
+  color:white;
+  font-weight:800;
+  font-size:18px;
 }
-
-.logo {
-font-size: 1.2rem;
-font-weight: bold;
-text-align: center;
-margin-bottom: 12px;
+nav a{
+  color:#dcebf5;
+  text-decoration:none;
+  margin:0 7px;
+  font-size:14px;
 }
-
-.logo a {
-color: #17324d;
-text-decoration: none;
+nav a:hover{color:white}
+.hero{
+  background:linear-gradient(135deg,#dceef8,#f7fbfd);
+  text-align:center;
+  padding:75px 20px;
 }
-
-nav {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 18px;
+.hero-icons{
+  font-size:45px;
+  margin-bottom:15px;
 }
-
-nav a {
-text-decoration: none;
-color: #17324d;
-font-size: 0.9rem;
-font-weight: bold;
+.hero h1{
+  font-size:clamp(38px,7vw,64px);
+  color:#0d2942;
+  margin-bottom:15px;
 }
-
-nav a:hover {
-color: #2b7a78;
+.hero p{
+  max-width:720px;
+  margin:auto;
+  font-size:18px;
 }
-
-
-/* HERO */
-
-.hero {
-padding: 80px 8%;
-text-align: center;
-background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
+.button{
+  display:inline-block;
+  margin-top:25px;
+  background:#0d5c82;
+  color:white;
+  padding:13px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
 }
-
-.mascots {
-font-size: 3.2rem;
-margin-bottom: 15px;
-letter-spacing: 8px;
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
 }
-
-.hero h1 {
-font-size: 3rem;
-margin-bottom: 15px;
+h2{
+  color:#0d2942;
+  font-size:32px;
+  margin-bottom:18px;
 }
-
-.hero h1 span {
-color: #2b7a78;
+h3{
+  color:#0d5c82;
+  margin-bottom:8px;
 }
-
-.hero p {
-max-width: 700px;
-margin: auto;
-font-size: 1.15rem;
-color: #557080;
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:25px;
 }
-
-.hero-button {
-display: inline-block;
-margin-top: 25px;
-padding: 13px 25px;
-background: #17324d;
-color: white;
-text-decoration: none;
-border-radius: 25px;
-font-weight: bold;
+.card{
+  background:white;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 4px 15px rgba(13,41,66,.08);
 }
-
-.hero-button:hover {
-background: #2b7a78;
+.mascot{
+  font-size:42px;
+  margin-bottom:10px;
 }
-
-
-/* GENERAL */
-
-main {
-max-width: 1100px;
-margin: auto;
-padding: 65px 8%;
+.highlight{
+  background:#e8f4fa;
+  border-left:5px solid #0d5c82;
+  padding:25px;
+  border-radius:12px;
+  margin-top:25px;
 }
-
-.section-title {
-text-align: center;
-margin-bottom: 35px;
+.path{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:25px;
 }
-
-.section-title p {
-color: #557080;
-margin-top: 8px;
+.path div{
+  background:#0d2942;
+  color:white;
+  padding:18px 10px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:bold;
 }
-
-.section {
-margin-bottom: 70px;
+.photo-gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:25px;
 }
-
-
-/* WHAT IS FHI */
-
-.about {
-background: white;
-padding: 35px;
-border-radius: 20px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+.photo-gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.2s;
 }
-
-.about p {
-color: #557080;
-margin-top: 12px;
+.photo-gallery img:hover{transform:scale(1.03)}
+.gallery-note{
+  font-size:14px;
+  color:#617180;
+  margin-top:10px;
 }
-
-
-/* MASCOTS */
-
-.mascot-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 22px;
+footer{
+  background:#0d2942;
+  color:#dcebf5;
+  text-align:center;
+  padding:35px 20px;
 }
-
-.mascot-card {
-background: white;
-padding: 30px;
-border-radius: 20px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.mascot-icon {
-font-size: 3rem;
-margin-bottom: 10px;
-}
-
-.mascot-card h3 {
-margin-bottom: 7px;
-}
-
-.mascot-card p {
-color: #557080;
-}
-
-.mascot-tag {
-display: inline-block;
-margin-top: 15px;
-padding: 5px 10px;
-background: #eef8f8;
-border-radius: 15px;
-font-size: 0.75rem;
-font-weight: bold;
-color: #2b7a78;
-}
-
-
-/* MISSION */
-
-.mission-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 22px;
-}
-
-.mission-card {
-background: #17324d;
-color: white;
-padding: 30px;
-border-radius: 20px;
-}
-
-.mission-card h3 {
-margin-bottom: 10px;
-}
-
-.mission-card p {
-color: #d8e7eb;
-}
-
-
-/* EXPLORE */
-
-.cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
-}
-
-.card {
-background: white;
-padding: 25px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-text-decoration: none;
-color: #17324d;
-display: block;
-transition: transform 0.2s ease;
-}
-
-.card:hover {
-transform: translateY(-5px);
-}
-
-.card h3 {
-margin-bottom: 8px;
-}
-
-.card p {
-color: #557080;
-}
-
-.card-link {
-display: inline-block;
-margin-top: 15px;
-font-size: 0.8rem;
-font-weight: bold;
-color: #2b7a78;
-}
-
-
-/* PATH */
-
-.path {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 12px;
-}
-
-.path-step {
-text-align: center;
-padding: 22px 10px;
-background: #eef8f8;
-border-radius: 15px;
-}
-
-.path-step .number {
-font-size: 0.7rem;
-font-weight: bold;
-color: #2b7a78;
-}
-
-.path-step h3 {
-font-size: 1rem;
-margin-top: 5px;
-}
-
-
-/* CALL TO ACTION */
-
-.cta {
-text-align: center;
-background: #e8f7f7;
-padding: 45px 25px;
-border-radius: 22px;
-}
-
-.cta h2 {
-margin-bottom: 10px;
-}
-
-.cta p {
-color: #557080;
-max-width: 600px;
-margin: auto;
-}
-
-.cta-button {
-display: inline-block;
-margin-top: 20px;
-padding: 12px 23px;
-background: #17324d;
-color: white;
-text-decoration: none;
-border-radius: 23px;
-font-weight: bold;
-}
-
-
-/* FOOTER */
-
-footer {
-text-align: center;
-padding: 30px;
-background: #17324d;
-color: white;
-}
-
-footer p {
-font-size: 0.9rem;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-header {
-padding: 16px 7%;
-}
-
-nav {
-gap: 10px;
-}
-
-.hero {
-padding: 65px 7%;
-}
-
-.hero h1 {
-font-size: 2.3rem;
-}
-
-main {
-padding: 50px 7%;
-}
-
-.mascot-grid,
-.mission-grid {
-grid-template-columns: 1fr;
-}
-
-.path {
-grid-template-columns: repeat(2, 1fr);
-}
-
+footer a{color:white}
+@media(max-width:700px){
+  nav{justify-content:center}
+  nav a{font-size:12px;margin:3px}
+  .path{grid-template-columns:repeat(2,1fr)}
+  .photo-gallery{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
 
-
 <body>
 
-<header>
-
-<div class="logo">
-<a href="index.html">🩺 Future Healers Initiative</a>
-</div>
-
 <nav>
-<a href="index.html">Home</a>
-<a href="explore.html">Explore</a>
-<a href="learn.html">Learn & Play</a>
-<a href="ask.html">Ask</a>
-<a href="involved.html">Get Involved</a>
-<a href="journey.html">Journey</a>
-<a href="impact.html">Impact</a>
+  <div class="logo">🩺 Future Healers Initiative</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="learn.html">Learn & Play</a>
+    <a href="ask.html">Ask</a>
+    <a href="involved.html">Get Involved</a>
+    <a href="journey.html">Journey</a>
+    <a href="impact.html">Impact</a>
+  </div>
 </nav>
 
+<header class="hero">
+  <div class="hero-icons">🦫 🩺 🐀</div>
+  <h1>Welcome to Future Healers</h1>
+  <p>
+    Healthcare exploration should be more than sitting in a room and listening to someone talk.
+    FHI gives students ways to explore, participate, serve, and lead.
+  </p>
+  <a class="button" href="explore.html">Start Exploring →</a>
 </header>
 
+<section>
+  <h2>🩺 So... What is FHI?</h2>
 
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="mascots">
-🦫 🩺 🐀
-</div>
-
-<h1>
-Welcome to <span>Future Healers</span>
-</h1>
-
-<p>
-Exploring healthcare should be more than sitting in a room
-and listening to someone talk... FHI gives students ways to 
-participate, serve, and learn!
-  
-</p>
-
-<a href="explore.html" class="hero-button">
-Start Exploring →
-</a>
-
+  <div class="highlight">
+    <p><strong>Basically, it's our way of making Pre-Med more interactive.</strong></p>
+    <br>
+    <p>
+      The Future Healers Initiative is a student-led part of the Pre-Med Society focused on making
+      healthcare exploration more hands-on, interactive, and actually fun.
+    </p>
+    <br>
+    <p>
+      Instead of only talking about healthcare careers, we want students to get opportunities to
+      try things, ask questions, meet people in healthcare, serve their community, and figure out
+      what they actually enjoy.
+    </p>
+  </div>
 </section>
 
+<section>
+  <h2>💙 How FHI Came Together</h2>
 
-<main>
+  <div class="card-grid">
+    <div class="card">
+      <div class="mascot">🩺</div>
+      <h3>Pre-Med Society</h3>
+      <p>
+        Pre-Med is the school club. It's the community where students interested in healthcare
+        can meet, participate, lead, and explore different parts of medicine.
+      </p>
+    </div>
 
+    <div class="card">
+      <div class="mascot">🚀</div>
+      <h3>StudentsBuild</h3>
+      <p>
+        StudentsBuild supports project-based student work at Ortho. Instead of creating a
+        completely separate StudentsBuild club, Pre-Med became the home for this project.
+      </p>
+    </div>
 
-<!-- ABOUT -->
-
-<section class="section">
-
-<div class="section-title">
-
-<h2>🩺 So... What is FHI?</h2>
-
-<p>
-Basically, it's our way of making Pre-Med more interactive.
-</p>
-
-</div>
-
-
-<div class="about">
-
-<p>
-The Future Healers Initiative is a student-led part of the
-Pre-Med Society at Ortho and is focused on making healthcare exploration
-more hands-on, interactive, and fun.
-</p>
-
-<p>
-Instead of only talking about healthcare careers, we want
-students to get opportunities to try things, ask questions,
-meet people in healthcare, serve their community, and have fun.
-</p>
-
-</div>
-
+    <div class="card">
+      <div class="mascot">🐀</div>
+      <h3>Future Healers Initiative</h3>
+      <p>
+        FHI is the interactive healthcare project within Pre-Med. It's where we turn ideas into
+        activities, service, mentorship, leadership, and real experiences.
+      </p>
+    </div>
+  </div>
 </section>
 
+<section>
+  <h2>🐀 Meet the Future Healers Crew</h2>
 
-<!-- MASCOTS -->
+  <div class="card-grid">
+    <div class="card">
+      <div class="mascot">🦫</div>
+      <h3>The Capybara</h3>
+      <p>
+        The Pre-Med Society's longtime mascot. Calm, curious, and somehow always involved.
+        The capybara represents the community side of FHI.
+      </p>
+    </div>
 
-<section class="section">
-
-<div class="section-title">
-
-<h2>🐀 Meet the Future Healers Mascots</h2>
-
-<p>
-Every good club needs mascots!
-</p>
-
-</div>
-
-
-<div class="mascot-grid">
-
-
-<div class="mascot-card">
-
-<div class="mascot-icon">🦫</div>
-
-<h3>Our Capybara</h3>
-
-<p>
-The Pre-Med Society's longtime mascot. 
-
-<div class="mascot-tag">
-PRE-MED SOCIETY
-</div>
-
-</div>
-
-
-<div class="mascot-card">
-
-<div class="mascot-icon">🐀</div>
-
-<h3>Our Rat</h3>
-
-<p>
-The FHI mascot. 
-</p>
-
-<div class="mascot-tag">
-FUTURE HEALERS
-</div>
-
-</div>
-
-</div>
-
+    <div class="card">
+      <div class="mascot">🐀</div>
+      <h3>The Rat</h3>
+      <p>
+        The FHI mascot. Curious, experimental, and always looking for the next thing to explore.
+        Basically the Future Healer who wants to know, "Wait... what happens if we try this?"
+      </p>
+    </div>
+  </div>
 </section>
 
+<section>
+  <h2>🎯 Our Mission</h2>
+  <div class="highlight">
+    <p><strong>Transform the Pre-Med Society into a more interactive healthcare exploration community.</strong></p>
+  </div>
 
-<!-- MISSION -->
+  <br>
 
-<section class="section">
-
-<div class="section-title">
-
-<h2>🎯 What We're About</h2>
-
-</div>
-
-
-<div class="mission-grid">
-
-<div class="mission-card">
-
-<h3>Our Mission</h3>
-
-<p>
-Turn Pre-Med Society into a more interactive
-healthcare exploration community.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<h3>Our Vision</h3>
-
-<p>
-to
-  create a school club where students explore
-healthcare careers through hands-on experiences,
-leadership, service, and workshops.
-</p>
-
-</div>
-
-</div>
-
+  <h2>🌱 Our Vision</h2>
+  <div class="highlight">
+    <p>
+      Create a school environment where students explore healthcare careers through hands-on
+      experiences, leadership, service, and mentorship.
+    </p>
+  </div>
 </section>
 
+<section>
+  <h2>🧭 The Future Healer Path</h2>
 
-<!-- EXPLORE -->
-
-<section class="section">
-
-<div class="section-title">
-
-<h2>🔎 Start Exploring</h2>
-
-<p>
-Not sure what part of healthcare interests you yet?
-That's literally what this is for.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<a href="explore.html" class="card">
-
-<h3>🩺 Healthcare Careers</h3>
-
-<p>
-Look through different healthcare careers and see
-what catches your attention.
-</p>
-
-<span class="card-link">
-Explore careers →
-</span>
-
-</a>
-
-
-<a href="explore.html" class="card">
-
-<h3>🧭 Career Match</h3>
-
-<p>
-Answer a few questions and get some careers you might
-want to explore.
-</p>
-
-<span class="card-link">
-Take the quiz →
-</span>
-
-</a>
-
-
-<a href="ask.html" class="card">
-
-<h3>💬 Meet & Ask</h3>
-
-<p>
-Ask future healers and healthcare professionals
-questions about their experiences.
-</p>
-
-<span class="card-link">
-Ask a question →
-</span>
-
-</a>
-
-</div>
-
+  <div class="path">
+    <div>🔎 Explore</div>
+    <div>🧪 Participate</div>
+    <div>🤝 Serve</div>
+    <div>⭐ Lead</div>
+  </div>
 </section>
 
+<section>
+  <h2>📸 A Little Look at Pre-Med</h2>
+  <p>Some moments from Club Rush and the people who make Pre-Med what it is.</p>
 
-<!-- LEARN -->
+  <div class="photo-gallery">
+    <img src="IMG_9418.jpeg" alt="Students holding the Join Pre-Med frame">
+    <img src="IMG_9415.jpeg" alt="Students at Pre-Med Club Rush">
+    <img src="IMG_9413.jpeg" alt="Students holding the Join Pre-Med frame">
+    <img src="IMG_9411.jpeg" alt="Students at Club Rush">
+    <img src="IMG_9407.jpeg" alt="Students participating at Club Rush">
+    <img src="IMG_9403.jpeg" alt="Students holding the Pre-Med frame">
+    <img src="IMG_9401.jpeg" alt="Students at Pre-Med Club Rush">
+    <img src="IMG_9400.jpeg" alt="Students holding the Join Pre-Med frame">
+  </div>
 
-<section class="section">
-
-<div class="section-title">
-
-<h2>🧠 Learn & Play</h2>
-
-<p>
-Because learning about healthcare doesn't have to be boring.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<a href="learn.html" class="card">
-
-<h3>🔎 Medical Mysteries</h3>
-
-<p>
-Follow clues, think through a case, and see how
-healthcare teams approach problems.
-</p>
-
-<span class="card-link">
-Solve a mystery →
-</span>
-
-</a>
-
-
-<a href="learn.html" class="card">
-
-<h3>🧩 Challenges</h3>
-
-<p>
-Try anatomy questions, medical myths, quick challenges,
-and future workshops.
-</p>
-
-<span class="card-link">
-Try a challenge →
-</span>
-
-</a>
-
-</div>
-
+  <p class="gallery-note">Club Rush • 2026 🩺</p>
 </section>
 
-
-<!-- PATH -->
-
-<section class="section">
-
-<div class="section-title">
-
-<h2>🚀 The Future Healer Path</h2>
-
-<p>
-There isn't one exact path. This is just how FHI thinks about it.
-</p>
-
-</div>
-
-
-<div class="path">
-
-<div class="path-step">
-
-<div class="number">01</div>
-
-<h3>🔎 Explore</h3>
-
-</div>
-
-
-<div class="path-step">
-
-<div class="number">02</div>
-
-<h3>🩺 Participate</h3>
-
-</div>
-
-
-<div class="path-step">
-
-<div class="number">03</div>
-
-<h3>🤝 Serve</h3>
-
-</div>
-
-
-<div class="path-step">
-
-<div class="number">04</div>
-
-<h3>👑 Lead</h3>
-
-</div>
-
-</div>
-
+<section style="text-align:center">
+  <h2>Ready to See Yourself in Healthcare?</h2>
+  <p>Start exploring. You don't have to know exactly what you want to do yet.</p>
+  <a class="button" href="explore.html">Explore Healthcare →</a>
 </section>
-
-
-<!-- CTA -->
-
-<section class="section">
-
-<div class="cta">
-
-<h2>🩺 Ready to See Yourself in Healthcare?</h2>
-
-<p>
-You don't have to know exactly what you want to become.
-Start somewhere and see where it takes you.
-</p>
-
-<a href="journey.html" class="cta-button">
-Start Your FHI Journey →
-</a>
-
-</div>
-
-</section>
-
-
-</main>
-
 
 <footer>
-
-<p>
-Future Healers Initiative • Pre-Med Society
-</p>
-
+  <p><strong>Future Healers Initiative × Pre-Med Society</strong></p>
+  <p>See Yourself in Healthcare 🩺</p>
 </footer>
 
 </body>
