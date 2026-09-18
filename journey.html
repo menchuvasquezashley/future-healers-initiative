@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FHI Journey | Future Healers Initiative</title>
+<title>Your FHI Journey | Future Healers Initiative</title>
 
 <style>
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -56,6 +57,9 @@ nav a:hover {
 color: #2b7a78;
 }
 
+
+/* HERO */
+
 .hero {
 text-align: center;
 padding: 70px 8%;
@@ -63,7 +67,7 @@ background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
 }
 
 .hero .emoji {
-font-size: 2.5rem;
+font-size: 2.7rem;
 margin-bottom: 10px;
 }
 
@@ -73,16 +77,23 @@ margin-bottom: 15px;
 }
 
 .hero p {
-max-width: 650px;
+max-width: 700px;
 margin: auto;
 font-size: 1.1rem;
 color: #557080;
 }
 
+
+/* MAIN */
+
 main {
-max-width: 1050px;
+max-width: 1100px;
 margin: auto;
 padding: 60px 8%;
+}
+
+.section {
+margin-bottom: 65px;
 }
 
 .section-title {
@@ -96,11 +107,11 @@ margin-top: 8px;
 }
 
 
-/* JOURNEY */
+/* JOURNEY STEPS */
 
 .steps {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: repeat(4, 1fr);
 gap: 18px;
 }
 
@@ -119,6 +130,54 @@ color: #2b7a78;
 
 .step h3 {
 margin: 5px 0;
+}
+
+
+/* FORM SECTIONS */
+
+.form-card {
+background: white;
+padding: 25px;
+border-radius: 20px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-card h3 {
+margin-bottom: 7px;
+}
+
+.form-card > p {
+color: #557080;
+}
+
+.form-frame {
+width: 100%;
+height: 720px;
+border: none;
+border-radius: 12px;
+margin-top: 20px;
+background: #f7fbfc;
+}
+
+
+/* LOCKED END SURVEY */
+
+.locked-card {
+background: #eef1f2;
+padding: 40px 25px;
+border-radius: 20px;
+text-align: center;
+opacity: 0.8;
+}
+
+.lock-icon {
+font-size: 3rem;
+margin-bottom: 10px;
+}
+
+.locked-card p {
+color: #557080;
+margin-top: 8px;
 }
 
 
@@ -143,7 +202,7 @@ margin-bottom: 25px;
 
 .points-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 gap: 12px;
 }
 
@@ -180,7 +239,7 @@ margin-bottom: 18px;
 
 .input-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 gap: 15px;
 }
 
@@ -208,6 +267,10 @@ background: #2b7a78;
 color: white;
 font-weight: bold;
 cursor: pointer;
+}
+
+.calculate-button:hover {
+background: #246966;
 }
 
 .total {
@@ -246,6 +309,8 @@ border-radius: 18px;
 text-align: center;
 box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 border: 2px solid transparent;
+opacity: 0.45;
+filter: grayscale(1);
 }
 
 .badge-icon {
@@ -262,12 +327,9 @@ font-size: 0.82rem;
 color: #557080;
 }
 
-.badge.locked {
-opacity: 0.45;
-filter: grayscale(1);
-}
-
 .badge.unlocked {
+opacity: 1;
+filter: none;
 border-color: #2b7a78;
 }
 
@@ -287,28 +349,22 @@ color: #17324d;
 }
 
 
-/* CHECKPOINT */
+/* NOTE */
 
-.checkpoint {
-margin-top: 65px;
+.note {
+margin-top: 30px;
 background: #eef8f8;
-padding: 30px;
-border-radius: 20px;
-}
-
-.checkpoint h2 {
-margin-bottom: 10px;
-}
-
-.checkpoint p {
-color: #557080;
-margin-bottom: 15px;
-}
-
-.checkpoint ul {
-padding-left: 20px;
+padding: 25px;
+border-radius: 18px;
 color: #557080;
 }
+
+.note strong {
+color: #17324d;
+}
+
+
+/* FOOTER */
 
 footer {
 text-align: center;
@@ -316,6 +372,9 @@ padding: 30px;
 background: #17324d;
 color: white;
 }
+
+
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -335,11 +394,20 @@ padding: 50px 7%;
 font-size: 2.2rem;
 }
 
+.steps {
+grid-template-columns: repeat(2, 1fr);
+}
+
 .points-box {
 padding: 25px;
 }
 
+.form-frame {
+height: 760px;
 }
+
+}
+
 </style>
 </head>
 
@@ -367,13 +435,15 @@ padding: 25px;
 
 <section class="hero">
 
-<div class="emoji">🧭 🩺 🐀</div>
+<div class="emoji">
+🧭 🩺 🐀
+</div>
 
 <h1>Your FHI Journey</h1>
 
 <p>
-Explore healthcare, try new things, serve your community,
-and see where your Future Healer journey takes you.
+Start your journey, participate in whatever we actually end up doing,
+check out after activities, and reflect at the end of the year.
 </p>
 
 </section>
@@ -384,12 +454,14 @@ and see where your Future Healer journey takes you.
 
 <!-- HOW IT WORKS -->
 
+<section class="section">
+
 <div class="section-title">
 
 <h2>🚀 How It Works</h2>
 
 <p>
-There isn't one right way to do FHI. Start wherever you want.
+There isn't one exact FHI schedule. We'll build it as we go.
 </p>
 
 </div>
@@ -400,41 +472,165 @@ There isn't one right way to do FHI. Start wherever you want.
 <div class="step">
 <div class="step-number">01</div>
 <h3>🔎 Explore</h3>
-<p>Learn about healthcare careers and discover what interests you.</p>
+<p>
+Discover healthcare careers, opportunities, and things you might want to try.
+</p>
 </div>
 
 
 <div class="step">
 <div class="step-number">02</div>
 <h3>🩺 Participate</h3>
-<p>Join activities, workshops, challenges, and events.</p>
+<p>
+Join activities, workshops, challenges, events, and whatever we create.
+</p>
 </div>
 
 
 <div class="step">
 <div class="step-number">03</div>
 <h3>🤝 Serve</h3>
-<p>Use what you learn to help your school and community.</p>
+<p>
+Use what you learn to help your school and community.
+</p>
 </div>
 
 
 <div class="step">
 <div class="step-number">04</div>
 <h3>👑 Lead</h3>
-<p>Take initiative, help others, and create something of your own.</p>
+<p>
+Take initiative, help others, and create something of your own.
+</p>
 </div>
 
 </div>
+
+</section>
+
+
+
+<!-- START SURVEY -->
+
+<section class="section" id="start-survey">
+
+<div class="section-title">
+
+<h2>🌱 Start Your FHI Journey</h2>
+
+<p>
+Complete this once at the beginning of the year.
+</p>
+
+</div>
+
+
+<div class="form-card">
+
+<h3>🌱 Beginning-of-Year Survey</h3>
+
+<p>
+This helps us understand where students are starting and what they want from Pre-Med/FHI.
+</p>
+
+
+<iframe
+class="form-frame"
+src="https://docs.google.com/forms/d/e/1FAIpQLScyZqCRRszsBa8t5F2urs6u_yW-VdhuuvnZqNagbmyNAj-iLA/viewform?embedded=true"
+title="FHI Beginning-of-Year Survey"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+
+<!-- ACTIVITY CHECKOUT -->
+
+<section class="section" id="activity-checkout">
+
+<div class="section-title">
+
+<h2>🩺 Activity Check-Out</h2>
+
+<p>
+Just finished something with FHI? This is the quick one.
+</p>
+
+</div>
+
+
+<div class="form-card">
+
+<h3>📝 FHI Activity Check-Out</h3>
+
+<p>
+Short on purpose. Your feedback helps us see what students actually enjoy and learn from.
+</p>
+
+
+<iframe
+class="form-frame"
+src="https://docs.google.com/forms/d/e/1FAIpQLSdZ1L4ZIxHJ5vfPgAPTlBOdUeR54Jz_0fvZHQhZKr2cPOdVDQ/viewform?embedded=true"
+title="FHI Activity Check-Out"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+
+<!-- END SURVEY -->
+
+<section class="section" id="end-survey">
+
+<div class="section-title">
+
+<h2>🌳 End-of-Year Reflection</h2>
+
+<p>
+This survey opens automatically on May 1, 2027.
+</p>
+
+</div>
+
+
+<div id="end-survey-area">
+
+<div class="locked-card">
+
+<div class="lock-icon">
+🔒
+</div>
+
+<h3>End-of-Year Survey Locked</h3>
+
+<p>
+Your final FHI reflection will open on May 1, 2027.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 
 
 <!-- POINTS -->
+
+<section class="section">
 
 <div class="points-box">
 
 <h2>⭐ FHI Points</h2>
 
 <p class="points-intro">
-The more you participate, the more points you can earn.
+The points system is a fun way to recognize participation.
 </p>
 
 
@@ -461,6 +657,11 @@ The more you participate, the more points you can earn.
 </div>
 
 <div class="point-item">
+<span>Bring a friend</span>
+<strong>+1</strong>
+</div>
+
+<div class="point-item">
 <span>Leadership / helping</span>
 <strong>+3</strong>
 </div>
@@ -478,7 +679,6 @@ The more you participate, the more points you can earn.
 </div>
 
 
-<!-- CALCULATOR -->
 
 <div class="calculator">
 
@@ -492,7 +692,7 @@ The more you participate, the more points you can earn.
 </div>
 
 <div class="input-group">
-<label>FHI Activities</label>
+<label>Activities</label>
 <input type="number" id="activities" min="0" value="0">
 </div>
 
@@ -504,6 +704,11 @@ The more you participate, the more points you can earn.
 <div class="input-group">
 <label>Service</label>
 <input type="number" id="service" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>Friends brought</label>
+<input type="number" id="friends" min="0" value="0">
 </div>
 
 <div class="input-group">
@@ -524,8 +729,12 @@ The more you participate, the more points you can earn.
 </div>
 
 
-<button class="calculate-button" onclick="calculatePoints()">
+<button
+class="calculate-button"
+onclick="calculatePoints()">
+
 Calculate My Points →
+
 </button>
 
 
@@ -536,10 +745,12 @@ Your total:
 <strong id="total-points">0</strong> points
 </div>
 
-<div id="raffle"></div>
+<div id="raffle">
+🎟️ Raffle entries: <strong>0</strong>
+</div>
 
 <div id="badge-message">
-Add your activities to see which badges you unlock!
+Start participating to unlock your first badge! 🔎
 </div>
 
 </div>
@@ -547,11 +758,14 @@ Add your activities to see which badges you unlock!
 </div>
 
 </div>
+
+</section>
+
 
 
 <!-- BADGES -->
 
-<div class="badges">
+<section class="section badges">
 
 <div class="section-title">
 
@@ -573,13 +787,14 @@ Little milestones for the things you actually do.
 
 <h3>Explorer</h3>
 
-<p>
-Start your Future Healer journey.
-</p>
+<p>Reach 1 point.</p>
 
-<div class="badge-status">🔒 Locked</div>
+<div class="badge-status">
+🔒 Locked
+</div>
 
 </div>
+
 
 
 <div class="badge" id="badge-healer">
@@ -588,13 +803,14 @@ Start your Future Healer journey.
 
 <h3>Future Healer</h3>
 
-<p>
-Reach 5 FHI points.
-</p>
+<p>Reach 5 points.</p>
 
-<div class="badge-status">🔒 Locked</div>
+<div class="badge-status">
+🔒 Locked
+</div>
 
 </div>
+
 
 
 <div class="badge" id="badge-helper">
@@ -603,13 +819,14 @@ Reach 5 FHI points.
 
 <h3>Community Helper</h3>
 
-<p>
-Reach 10 FHI points.
-</p>
+<p>Reach 10 points.</p>
 
-<div class="badge-status">🔒 Locked</div>
+<div class="badge-status">
+🔒 Locked
+</div>
 
 </div>
+
 
 
 <div class="badge" id="badge-healthcare">
@@ -618,13 +835,14 @@ Reach 10 FHI points.
 
 <h3>Healthcare Explorer</h3>
 
-<p>
-Reach 15 FHI points.
-</p>
+<p>Reach 15 points.</p>
 
-<div class="badge-status">🔒 Locked</div>
+<div class="badge-status">
+🔒 Locked
+</div>
 
 </div>
+
 
 
 <div class="badge" id="badge-leader">
@@ -633,40 +851,28 @@ Reach 15 FHI points.
 
 <h3>Leader</h3>
 
-<p>
-Reach 20 FHI points.
-</p>
+<p>Reach 20 points.</p>
 
-<div class="badge-status">🔒 Locked</div>
-
+<div class="badge-status">
+🔒 Locked
 </div>
 
 </div>
 
+
 </div>
 
+</section>
 
-<!-- CHECKPOINT -->
 
-<div class="checkpoint">
 
-<h2>📝 Future Healer Checkpoint</h2>
+<div class="note">
 
-<p>
-After an activity, take a minute to think about what you actually got out of it.
-</p>
+<strong>💙 One important thing:</strong>
 
-<ul>
-
-<li>How much did you enjoy the activity? ⭐ 1–5</li>
-
-<li>How much did you learn? 🧠 1–5</li>
-
-<li>What is one thing you learned or found interesting?</li>
-
-<li>Would you want to do something like this again? Yes / Maybe / No</li>
-
-</ul>
+The Google Forms are the actual place where your responses are collected.
+The points calculator is a student-facing estimate for the FHI Journey.
+Your Google Sheet can be used by the Pre-Med/FHI team to keep the official participation record.
 
 </div>
 
@@ -683,45 +889,134 @@ Future Healers Initiative • Pre-Med Society
 </footer>
 
 
+
 <script>
 
-function getValue(id) {
+/* -------------------------
+   END SURVEY UNLOCK
+------------------------- */
 
-let value = Number(document.getElementById(id).value);
+const endSurveyDate = new Date("2027-05-01T00:00:00");
 
-return value < 0 ? 0 : value;
+function checkEndSurvey() {
+
+const now = new Date();
+
+const area = document.getElementById("end-survey-area");
+
+if (now >= endSurveyDate) {
+
+area.innerHTML = `
+
+<div class="form-card">
+
+<h3>🌳 End-of-Year Survey</h3>
+
+<p>
+Your final FHI reflection is now open.
+</p>
+
+<iframe
+class="form-frame"
+src="https://docs.google.com/forms/d/e/1FAIpQLSf98Ary09pMkMb3RoLHqwvFS7DzMkqs7Mo2PeVaAjG_VrFSDQ/viewform?embedded=true"
+title="FHI End-of-Year Survey">
+</iframe>
+
+</div>
+
+`;
+
+}
+
+}
+
+checkEndSurvey();
+
+
+
+/* -------------------------
+   POINTS CALCULATOR
+------------------------- */
+
+function getNumber(id) {
+
+const value =
+Number(document.getElementById(id).value);
+
+if (value < 0 || isNaN(value)) {
+
+return 0;
+
+}
+
+return value;
 
 }
 
 
+
 function calculatePoints() {
 
-let meetings = getValue("meetings");
-let activities = getValue("activities");
-let challenges = getValue("challenges");
-let service = getValue("service");
-let leadership = getValue("leadership");
-let workshops = getValue("workshops");
-let reflections = getValue("reflections");
+const meetings =
+getNumber("meetings");
+
+const activities =
+getNumber("activities");
+
+const challenges =
+getNumber("challenges");
+
+const service =
+getNumber("service");
+
+const friends =
+getNumber("friends");
+
+const leadership =
+getNumber("leadership");
+
+const workshops =
+getNumber("workshops");
+
+const reflections =
+getNumber("reflections");
 
 
-let total =
+const total =
+
 (meetings * 1) +
+
 (activities * 2) +
+
 (challenges * 1) +
+
 (service * 3) +
+
+(friends * 1) +
+
 (leadership * 3) +
+
 (workshops * 2) +
+
 (reflections * 1);
 
 
-document.getElementById("total-points").textContent = total;
+
+document.getElementById("total-points")
+.textContent = total;
 
 
-let raffleEntries = Math.floor(total / 10);
 
-document.getElementById("raffle").innerHTML =
-"🎟️ Raffle entries: <strong>" + raffleEntries + "</strong>";
+const raffleEntries =
+Math.floor(total / 10);
+
+
+document.getElementById("raffle")
+.innerHTML =
+"🎟️ Raffle entries: <strong>" +
+raffleEntries +
+"</strong>";
+
 
 
 updateBadges(total);
@@ -729,92 +1024,109 @@ updateBadges(total);
 }
 
 
-function unlockBadge(id) {
 
-let badge = document.getElementById(id);
+/* -------------------------
+   BADGES
+------------------------- */
 
-badge.classList.remove("locked");
+function setBadge(id, unlocked) {
+
+const badge =
+document.getElementById(id);
+
+const status =
+badge.querySelector(".badge-status");
+
+
+if (unlocked) {
+
 badge.classList.add("unlocked");
 
-badge.querySelector(".badge-status").textContent =
+status.textContent =
 "✓ Unlocked";
 
-}
-
-
-function lockBadge(id) {
-
-let badge = document.getElementById(id);
+} else {
 
 badge.classList.remove("unlocked");
-badge.classList.add("locked");
 
-badge.querySelector(".badge-status").textContent =
+status.textContent =
 "🔒 Locked";
 
 }
 
+}
+
+
 
 function updateBadges(points) {
 
-lockBadge("badge-explorer");
-lockBadge("badge-healer");
-lockBadge("badge-helper");
-lockBadge("badge-healthcare");
-lockBadge("badge-leader");
+setBadge(
+"badge-explorer",
+points >= 1
+);
+
+setBadge(
+"badge-healer",
+points >= 5
+);
+
+setBadge(
+"badge-helper",
+points >= 10
+);
+
+setBadge(
+"badge-healthcare",
+points >= 15
+);
+
+setBadge(
+"badge-leader",
+points >= 20
+);
 
 
-if (points >= 1) {
-unlockBadge("badge-explorer");
-}
 
-if (points >= 5) {
-unlockBadge("badge-healer");
-}
-
-if (points >= 10) {
-unlockBadge("badge-helper");
-}
-
-if (points >= 15) {
-unlockBadge("badge-healthcare");
-}
-
-if (points >= 20) {
-unlockBadge("badge-leader");
-}
-
-
-let message =
+const message =
 document.getElementById("badge-message");
 
 
 if (points === 0) {
 
 message.textContent =
-"Start exploring to unlock your first badge! 🔎";
+"Start participating to unlock your first badge! 🔎";
 
-} else if (points < 5) {
+}
+
+else if (points < 5) {
 
 message.textContent =
-"You're on your way! Keep participating to unlock Future Healer. 🩺";
+"You're on your way! Keep participating. 🩺";
 
-} else if (points < 10) {
+}
+
+else if (points < 10) {
 
 message.textContent =
 "Future Healer unlocked! Keep going. 👀";
 
-} else if (points < 15) {
+}
+
+else if (points < 15) {
 
 message.textContent =
 "Community Helper unlocked! You're building momentum. 🤝";
 
-} else if (points < 20) {
+}
+
+else if (points < 20) {
 
 message.textContent =
-"Healthcare Explorer unlocked! One more badge is waiting. 🔬";
+"Healthcare Explorer unlocked! 🔬";
 
-} else {
+}
+
+else {
 
 message.textContent =
 "👑 Leader unlocked! Look at you, Future Healer.";
