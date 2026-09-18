@@ -2,210 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Our Impact | Future Healers Initiative</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Our Impact | FHI</title>
 
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f8fb;color:#172b3a;line-height:1.6}
+nav{background:#0d2942;padding:15px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{color:white;font-weight:bold}
+nav a{color:#dcebf5;text-decoration:none;margin:0 6px;font-size:14px}
+.hero{text-align:center;background:#e5f2f8;padding:65px 20px}
+.hero h1{font-size:48px;color:#0d2942}
+section{max-width:1100px;margin:auto;padding:55px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:25px}
+.card{background:white;padding:25px;border-radius:18px;box-shadow:0 4px 15px rgba(13,41,66,.08)}
+h2{color:#0d2942;font-size:32px}
+h3{color:#0d5c82}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px}
+.stat{background:#0d2942;color:white;padding:25px;border-radius:16px;text-align:center}
+.stat strong{display:block;font-size:32px}
+.gallery{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:9px;
+margin-top:25px;
 }
-
-body {
-font-family: Arial, sans-serif;
-background: #f7fbfc;
-color: #17324d;
-line-height: 1.6;
+.gallery img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:11px;
+cursor:pointer;
+transition:.2s;
 }
-
-header {
-background: white;
-padding: 18px 8%;
-border-bottom: 1px solid #e5eeee;
+.gallery img:hover{transform:scale(1.04)}
+.gallery-note{color:#657583;margin-top:10px;font-size:14px}
+footer{background:#0d2942;color:white;text-align:center;padding:30px}
+@media(max-width:800px){
+.stats{grid-template-columns:repeat(2,1fr)}
+.gallery{grid-template-columns:repeat(4,1fr)}
 }
-
-.logo {
-font-size: 1.2rem;
-font-weight: bold;
-text-align: center;
-margin-bottom: 12px;
-}
-
-.logo a {
-color: #17324d;
-text-decoration: none;
-}
-
-nav {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 18px;
-}
-
-nav a {
-text-decoration: none;
-color: #17324d;
-font-size: 0.9rem;
-font-weight: bold;
-}
-
-nav a:hover {
-color: #2b7a78;
-}
-
-.hero {
-text-align: center;
-padding: 70px 8%;
-background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
-}
-
-.hero .emoji {
-font-size: 2.5rem;
-margin-bottom: 10px;
-}
-
-.hero h1 {
-font-size: 2.8rem;
-margin-bottom: 12px;
-}
-
-.hero p {
-max-width: 700px;
-margin: auto;
-color: #557080;
-}
-
-main {
-max-width: 1100px;
-margin: auto;
-padding: 60px 8%;
-}
-
-.intro {
-text-align: center;
-max-width: 750px;
-margin: 0 auto 45px;
-}
-
-.intro p {
-color: #557080;
-margin-top: 10px;
-}
-
-.cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
-}
-
-.card {
-background: white;
-padding: 25px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.card h2 {
-font-size: 1.2rem;
-margin-bottom: 8px;
-}
-
-.card p {
-color: #557080;
-}
-
-.status {
-display: inline-block;
-margin-top: 15px;
-padding: 6px 12px;
-border-radius: 20px;
-background: #e8f7f7;
-color: #2b7a78;
-font-size: 0.8rem;
-font-weight: bold;
-}
-
-.story {
-margin-top: 50px;
-background: #17324d;
-color: white;
-padding: 40px;
-border-radius: 20px;
-}
-
-.story p {
-margin-top: 12px;
-opacity: 0.9;
-}
-
-.stats {
-margin-top: 45px;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-gap: 18px;
-}
-
-.stat {
-background: #eef8f8;
-padding: 25px;
-border-radius: 16px;
-text-align: center;
-}
-
-.stat-number {
-font-size: 2rem;
-font-weight: bold;
-}
-
-.stat-label {
-color: #557080;
-margin-top: 5px;
-}
-
-.voice {
-margin-top: 45px;
-padding: 30px;
-background: white;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-footer {
-text-align: center;
-padding: 30px;
-background: #17324d;
-color: white;
-}
-
-@media (max-width: 700px) {
-
-nav {
-gap: 10px;
-}
-
-main {
-padding: 50px 7%;
-}
-
-.hero h1 {
-font-size: 2.2rem;
-}
+@media(max-width:500px){
+nav{justify-content:center}
+nav a{font-size:12px}
+.hero h1{font-size:38px}
+.gallery{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-<a href="index.html">🩺 Future Healers Initiative</a>
-</div>
-
 <nav>
+<div class="logo">🩺 Future Healers Initiative</div>
+<div>
 <a href="index.html">Home</a>
 <a href="explore.html">Explore</a>
 <a href="learn.html">Learn & Play</a>
@@ -213,163 +63,118 @@ font-size: 2.2rem;
 <a href="involved.html">Get Involved</a>
 <a href="journey.html">Journey</a>
 <a href="impact.html">Impact</a>
+</div>
 </nav>
 
+<header class="hero">
+<h1>📈 🩺 🐀 Our Impact</h1>
+<p>This is where we can show what Pre-Med and FHI actually do.</p>
 </header>
 
+<section>
 
-<section class="hero">
+<h2>🚀 What We're Building</h2>
 
-<div class="emoji">📈 🩺 🐀</div>
-
-<h1>Our Impact</h1>
-
-<p>
-FHI is built by students, for students. This is where we'll
-show what we're learning, building, and accomplishing together.
-</p>
-
-</section>
-
-
-<main>
-
-<div class="intro">
-
-<h2>💙 What We're Building</h2>
-
-<p>
-Our impact isn't just about numbers. It's also about the
-experiences students have, the connections they make, and
-the opportunities they help create.
-</p>
-
-</div>
-
-
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-
-<h2>🧑‍🎓 Student Experiences</h2>
-
-<p>
-Activities and experiences that help students explore
-healthcare in ways they can actually participate in.
-</p>
-
-<span class="status">Tracking this year</span>
-
+<h3>🧪 Student Experiences</h3>
+<p>Interactive activities, healthcare exploration, challenges, and workshops.</p>
 </div>
-
 
 <div class="card">
-
-<h2>❤️ Service</h2>
-
-<p>
-Projects that allow Future Healers to contribute to their
-school and community.
-</p>
-
-<span class="status">Tracking this year</span>
-
+<h3>🤝 Service</h3>
+<p>Projects that let students use what they learn to help their community.</p>
 </div>
-
 
 <div class="card">
-
-<h2>👩‍⚕️ Healthcare Connections</h2>
-
-<p>
-Connections with healthcare professionals, mentors,
-speakers, and programs.
-</p>
-
-<span class="status">Growing throughout the year</span>
-
+<h3>👩‍⚕️ Healthcare Connections</h3>
+<p>Q&As, interviews, mentorship, and opportunities to hear directly from healthcare professionals.</p>
 </div>
-
 
 <div class="card">
-
-<h2>⭐ Leadership</h2>
-
-<p>
-Students taking initiative, creating activities, and
-helping shape the future of FHI.
-</p>
-
-<span class="status">Growing throughout the year</span>
-
+<h3>⭐ Leadership</h3>
+<p>Students helping plan, lead, create, and improve the Pre-Med experience.</p>
 </div>
 
 </div>
 
+<h2 style="margin-top:60px">📊 Our Numbers</h2>
 
 <div class="stats">
 
 <div class="stat">
-<div class="stat-number">—</div>
-<div class="stat-label">Students Reached</div>
+<strong>—</strong>
+Students Reached
 </div>
 
 <div class="stat">
-<div class="stat-number">—</div>
-<div class="stat-label">Activities</div>
+<strong>—</strong>
+Activities
 </div>
 
 <div class="stat">
-<div class="stat-number">—</div>
-<div class="stat-label">Service Projects</div>
+<strong>—</strong>
+Service Projects
 </div>
 
 <div class="stat">
-<div class="stat-number">—</div>
-<div class="stat-label">Healthcare Connections</div>
+<strong>—</strong>
+Healthcare Connections
 </div>
 
 </div>
 
+<p style="margin-top:15px;color:#687785">
+We'll add real numbers as the year goes on. No fake stats.
+</p>
 
-<div class="story">
-
-<h2>📖 Our Story Will Grow Here</h2>
+<h2 style="margin-top:60px">📸 Club Rush 2026</h2>
 
 <p>
-As FHI develops, this page will become a record of what
-students actually accomplish. We'll add real numbers,
-photos, reflections, projects, and student voices instead
-of making up statistics.
+Our first look at Pre-Med this year — students meeting the club, signing up, and yes...
+the rat made an appearance. 🐀
 </p>
 
+<div class="gallery">
+
+<img src="IMG_9418.jpeg" alt="Club Rush">
+<img src="IMG_9415.jpeg" alt="Club Rush">
+<img src="IMG_9413.jpeg" alt="Club Rush">
+<img src="IMG_9411.jpeg" alt="Club Rush">
+<img src="IMG_9407.jpeg" alt="Club Rush">
+<img src="IMG_9403.jpeg" alt="Club Rush">
+<img src="IMG_9401.jpeg" alt="Club Rush">
+<img src="IMG_9400.jpeg" alt="Club Rush">
+
+<img src="IMG_9635.jpeg" alt="Pre-Med Club Rush table">
+
+<img src="IMG_9637.jpeg" alt="Pre-Med rat mascot">
+<img src="IMG_9642.jpeg" alt="Pre-Med rat mascot">
+<img src="IMG_9641.jpeg" alt="Pre-Med rat mascot">
+<img src="IMG_9640.jpeg" alt="Pre-Med rat mascot">
+<img src="IMG_9639.jpeg" alt="Pre-Med rat mascot">
+<img src="IMG_9638.jpeg" alt="Pre-Med rat mascot">
+
 </div>
 
-
-<div class="voice">
-
-<h2>💬 Student Voices</h2>
-
-<p style="margin-top:10px; color:#557080;">
-This section will feature reflections from Future Healers
-about activities, workshops, service, and what they learned.
+<p class="gallery-note">
+Club Rush photos • 2026
 </p>
 
-<div style="margin-top:18px;" class="status">
-Coming soon
+<h2 style="margin-top:60px">💬 Student Voices</h2>
+
+<div class="card">
+<h3>Coming soon...</h3>
+<p>
+As FHI grows, we'll add student reflections, feedback, and things people actually learned or enjoyed.
+</p>
 </div>
 
-</div>
-
-</main>
-
+</section>
 
 <footer>
-
-<p>
-Future Healers Initiative • Pre-Med Society
-</p>
-
+<p>Future Healers Initiative × Pre-Med Society 🩺</p>
 </footer>
 
 </body>
