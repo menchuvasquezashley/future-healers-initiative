@@ -2,294 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Learn & Play | Future Healers Initiative</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Learn & Play | FHI</title>
 
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: Arial, sans-serif;
-background: #f7fbfc;
-color: #17324d;
-line-height: 1.6;
-}
-
-header {
-background: white;
-padding: 18px 8%;
-border-bottom: 1px solid #e5eeee;
-}
-
-.logo {
-font-size: 1.2rem;
-font-weight: bold;
-text-align: center;
-margin-bottom: 12px;
-}
-
-.logo a {
-color: #17324d;
-text-decoration: none;
-}
-
-nav {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 18px;
-}
-
-nav a {
-text-decoration: none;
-color: #17324d;
-font-size: 0.9rem;
-font-weight: bold;
-}
-
-nav a:hover {
-color: #2b7a78;
-}
-
-.hero {
-text-align: center;
-padding: 70px 8%;
-background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
-}
-
-.hero .emoji {
-font-size: 2.5rem;
-margin-bottom: 10px;
-}
-
-.hero h1 {
-font-size: 2.7rem;
-margin-bottom: 15px;
-}
-
-.hero p {
-max-width: 650px;
-margin: auto;
-font-size: 1.1rem;
-color: #557080;
-}
-
-main {
-max-width: 1050px;
-margin: auto;
-padding: 60px 8%;
-}
-
-.section-title {
-text-align: center;
-margin-bottom: 35px;
-}
-
-.section-title p {
-color: #557080;
-margin-top: 8px;
-}
-
-.cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-gap: 20px;
-}
-
-.card {
-background: white;
-padding: 25px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.card h3 {
-margin-bottom: 8px;
-}
-
-.card p {
-color: #557080;
-}
-
-.tag {
-display: inline-block;
-margin-top: 15px;
-font-size: 0.78rem;
-font-weight: bold;
-color: #2b7a78;
-}
-
-
-/* MEDICAL MYSTERY */
-
-.mystery {
-margin-top: 65px;
-background: #17324d;
-color: white;
-padding: 35px;
-border-radius: 22px;
-}
-
-.mystery h2 {
-margin-bottom: 8px;
-}
-
-.mystery-intro {
-color: #d8e7eb;
-margin-bottom: 25px;
-}
-
-.case-file {
-background: white;
-color: #17324d;
-padding: 25px;
-border-radius: 16px;
-}
-
-.case-label {
-font-size: 0.75rem;
-font-weight: bold;
-letter-spacing: 1px;
-color: #2b7a78;
-margin-bottom: 5px;
-}
-
-.case-file h3 {
-margin-bottom: 10px;
-}
-
-.case-file p {
-color: #557080;
-}
-
-.clue {
-margin-top: 14px;
-padding: 14px;
-background: #eef8f8;
-border-radius: 10px;
-}
-
-.clue strong {
-display: block;
-margin-bottom: 3px;
-}
-
-.mystery-question {
-margin-top: 25px;
-}
-
-.mystery-option {
-display: block;
-width: 100%;
-text-align: left;
-padding: 13px 15px;
-margin-top: 9px;
-border: 1px solid #d7e3e5;
-border-radius: 10px;
-background: #f9fcfc;
-color: #17324d;
-cursor: pointer;
-font-family: Arial, sans-serif;
-font-size: 0.95rem;
-}
-
-.mystery-option:hover {
-background: #e8f7f7;
-}
-
-.mystery-option.selected {
-background: #d9eeee;
-border-color: #2b7a78;
-font-weight: bold;
-}
-
-.mystery-button {
-margin-top: 20px;
-padding: 12px 22px;
-border: none;
-border-radius: 22px;
-background: #2b7a78;
-color: white;
-font-weight: bold;
-cursor: pointer;
-}
-
-.mystery-result {
-display: none;
-margin-top: 20px;
-padding: 17px;
-background: #eef8f8;
-color: #17324d;
-border-radius: 12px;
-}
-
-
-/* OTHER SECTIONS */
-
-.quiz-card {
-margin-top: 20px;
-background: white;
-padding: 25px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.quiz-card h3 {
-margin-bottom: 8px;
-}
-
-.quiz-card p {
-color: #557080;
-}
-
-footer {
-text-align: center;
-padding: 30px;
-background: #17324d;
-color: white;
-}
-
-@media (max-width: 700px) {
-
-header {
-padding: 16px 7%;
-}
-
-nav {
-gap: 10px;
-}
-
-main {
-padding: 50px 7%;
-}
-
-.hero h1 {
-font-size: 2.2rem;
-}
-
-.mystery {
-padding: 25px;
-}
-
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f8fb;color:#172b3a;line-height:1.6}
+nav{background:#0d2942;padding:15px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{color:white;font-weight:bold}
+nav a{color:#dcebf5;text-decoration:none;margin:0 6px;font-size:14px}
+.hero{text-align:center;background:#e5f2f8;padding:65px 20px}
+.hero h1{font-size:48px;color:#0d2942}
+section{max-width:1050px;margin:auto;padding:55px 20px}
+.card{background:white;padding:27px;border-radius:18px;margin-top:22px;box-shadow:0 4px 15px rgba(13,41,66,.08)}
+h2{color:#0d2942;font-size:31px}
+h3{color:#0d5c82;margin-bottom:8px}
+.choice{background:#edf5f8;padding:12px;border-radius:10px;margin:7px 0;cursor:pointer}
+button{background:#0d5c82;color:white;border:0;padding:11px 17px;border-radius:9px;font-weight:bold;cursor:pointer}
+.answer{display:none;margin-top:15px;background:#e8f4fa;padding:15px;border-radius:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+footer{background:#0d2942;color:white;text-align:center;padding:30px}
+@media(max-width:700px){nav{justify-content:center}.hero h1{font-size:37px}}
 </style>
 </head>
 
-
 <body>
 
-<header>
-
-<div class="logo">
-<a href="index.html">🩺 Future Healers Initiative</a>
-</div>
-
 <nav>
+<div class="logo">🩺 Future Healers Initiative</div>
+<div>
 <a href="index.html">Home</a>
 <a href="explore.html">Explore</a>
 <a href="learn.html">Learn & Play</a>
@@ -297,418 +38,98 @@ padding: 25px;
 <a href="involved.html">Get Involved</a>
 <a href="journey.html">Journey</a>
 <a href="impact.html">Impact</a>
+</div>
 </nav>
 
+<header class="hero">
+<h1>🧠 🧩 🔬 Learn & Play</h1>
+<p>Healthcare is easier to remember when you actually get to do something.</p>
 </header>
 
+<section>
 
-<section class="hero">
+<h2>🕵️ Medical Mystery #001</h2>
 
-<div class="emoji">🧠 🧩 🔬</div>
-
-<h1>Learn & Play</h1>
+<div class="card">
+<h3>The Mystery of the Missing Energy</h3>
 
 <p>
-Healthcare is easier to remember when you actually get to
-do something. Try a challenge, solve a mystery, or test what you know.
+A student has been feeling tired and having trouble concentrating.
+Here are a few clues:
 </p>
+
+<ul style="margin:15px 0 15px 25px">
+<li>They have been sleeping around 5 hours a night.</li>
+<li>They sometimes skip breakfast and lunch.</li>
+<li>They have been stressed about school.</li>
+</ul>
+
+<p><strong>Which question would be most useful to ask next?</strong></p>
+
+<div class="choice" onclick="showAnswer()">A. What is your favorite subject?</div>
+<div class="choice" onclick="showAnswer()">B. What does your sleep, food, and daily routine usually look like?</div>
+<div class="choice" onclick="showAnswer()">C. What color do you like?</div>
+
+<div class="answer" id="mysteryAnswer">
+<strong>✅ B!</strong>
+Understanding someone's daily routine gives more useful context.
+This is a fictional learning activity, not a diagnosis.
+</div>
+</div>
+
+<h2 style="margin-top:55px">💊 Medical Myth or Fact</h2>
+
+<div class="card">
+<h3>“Antibiotics can treat viral infections like the common cold.”</h3>
+
+<div class="choice" onclick="document.getElementById('myth').style.display='block'">
+Myth or Fact?
+</div>
+
+<div class="answer" id="myth">
+<strong>❌ Myth.</strong>
+Antibiotics work against bacteria, not viruses such as those that cause the common cold.
+</div>
+</div>
+
+<h2 style="margin-top:55px">🧪 Hands-On Challenges</h2>
+
+<div class="grid">
+<div class="card"><h3>🩺 Medical Equipment</h3><p>Learn what common healthcare tools are actually used for.</p></div>
+<div class="card"><h3>🦴 Anatomy Challenges</h3><p>Test yourself on the human body.</p></div>
+<div class="card"><h3>💊 Medical Myth or Fact</h3><p>Separate common healthcare myths from facts.</p></div>
+<div class="card"><h3>⏱️ 5-Minute Challenges</h3><p>Quick activities you can complete during a meeting.</p></div>
+</div>
+
+<h2 style="margin-top:55px">🩺 Workshops</h2>
+
+<div class="grid">
+<div class="card">
+<h3>❤️ CPR & Emergency Response</h3>
+<p>Hands-on learning led by a qualified instructor.</p>
+</div>
+
+<div class="card">
+<h3>🔬 Healthcare Skills</h3>
+<p>Explore practical healthcare skills and equipment.</p>
+</div>
+
+<div class="card">
+<h3>👥 Team Challenges</h3>
+<p>Work together to solve healthcare-related problems.</p>
+</div>
+</div>
 
 </section>
 
-
-<main>
-
-
-<div class="section-title">
-
-<h2>🕵️ Medical Mysteries</h2>
-
-<p>
-Think like a future healthcare professional and follow the clues.
-</p>
-
-</div>
-
-
-<!-- MEDICAL MYSTERY -->
-
-<div class="mystery">
-
-<h2>🔎 Medical Mystery #001</h2>
-
-<p class="mystery-intro">
-A fictional case made for FHI. Your job isn't to diagnose anyone —
-it's to figure out what clue would help you understand the situation.
-</p>
-
-
-<div class="case-file">
-
-<div class="case-label">CASE FILE</div>
-
-<h3>🧑‍🎓 The Mystery of the Missing Energy</h3>
-
-<p>
-A student has been feeling unusually tired during the school day.
-They say they've been having trouble concentrating in class too.
-You are part of a healthcare team trying to figure out what
-information would be useful next.
-</p>
-
-
-<div class="clue">
-
-<strong>🔎 Clue #1</strong>
-
-They've been sleeping about 5 hours a night because of a busy
-school schedule.
-</div>
-
-
-<div class="clue">
-
-<strong>🔎 Clue #2</strong>
-
-They usually skip breakfast and sometimes forget to eat lunch.
-</div>
-
-
-<div class="clue">
-
-<strong>🔎 Clue #3</strong>
-
-They say they've been feeling stressed about school lately.
-</div>
-
-
-<div class="mystery-question">
-
-<strong>
-Which would be the most useful NEXT question to ask?
-</strong>
-
-
-<button class="mystery-option"
-onclick="selectMystery(this, 'A')">
-
-A. What is your favorite school subject?
-</button>
-
-
-<button class="mystery-option"
-onclick="selectMystery(this, 'B')">
-
-B. What does your sleep, food, and daily routine usually look like?
-</button>
-
-
-<button class="mystery-option"
-onclick="selectMystery(this, 'C')">
-
-C. What color is your backpack?
-</button>
-
-
-<button class="mystery-option"
-onclick="selectMystery(this, 'D')">
-
-D. What is your favorite movie?
-</button>
-
-
-<button class="mystery-button" onclick="checkMystery()">
-
-🔍 Check Answer
-
-</button>
-
-
-<div id="mystery-result" class="mystery-result"></div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- MYTH OR FACT -->
-
-<div class="section-title" style="margin-top:70px;">
-
-<h2>🧠 Medical Myth or Fact</h2>
-
-<p>
-Let's see if you can separate common myths from actual science.
-</p>
-
-</div>
-
-
-<div class="quiz-card">
-
-<h3>
-🦠 “Antibiotics can treat viral infections like the common cold.”
-</h3>
-
-<button class="mystery-option"
-onclick="mythAnswer(this, false)">
-MYTH
-</button>
-
-<button class="mystery-option"
-onclick="mythAnswer(this, true)">
-FACT
-</button>
-
-<div id="myth-result" class="mystery-result"></div>
-
-</div>
-
-
-<!-- HANDS ON -->
-
-<div class="section-title" style="margin-top:70px;">
-
-<h2>👐 Hands-On Challenges</h2>
-
-<p>
-Small activities that get you thinking beyond the textbook.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🩺 Medical Equipment</h3>
-
-<p>
-Learn what different pieces of healthcare equipment are used for
-and see how many you can recognize.
-</p>
-
-<span class="tag">COMING SOON</span>
-
-</div>
-
-
-<div class="card">
-
-<h3>🦴 Anatomy Challenges</h3>
-
-<p>
-Test your knowledge of the human body with quick anatomy
-questions and mini challenges.
-</p>
-
-<span class="tag">COMING SOON</span>
-
-</div>
-
-
-<div class="card">
-
-<h3>🧠 Medical Myth or Fact</h3>
-
-<p>
-Think you know what's true? Test yourself with quick
-health-science questions.
-</p>
-
-<span class="tag">TRY IT ABOVE ↑</span>
-
-</div>
-
-</div>
-
-
-<!-- WORKSHOPS -->
-
-<div class="section-title" style="margin-top:70px;">
-
-<h2>🩺 Workshops</h2>
-
-<p>
-Future Healer activities we'll build throughout the year.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<div class="card">
-
-<h3>❤️ CPR & Emergency Response</h3>
-
-<p>
-A hands-on workshop led by a qualified instructor.
-</p>
-
-<span class="tag">PLANNED</span>
-
-</div>
-
-
-<div class="card">
-
-<h3>🧤 Healthcare Skills</h3>
-
-<p>
-Practice healthcare-related skills through interactive,
-student-friendly activities.
-</p>
-
-<span class="tag">PLANNED</span>
-
-</div>
-
-</div>
-
-
-<!-- FUTURE HEALER CHALLENGES -->
-
-<div class="section-title" style="margin-top:70px;">
-
-<h2>🚀 Future Healer Challenges</h2>
-
-<p>
-Quick challenges you can do during a meeting or on your own.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<div class="card">
-
-<h3>⏱️ 5-Minute Challenges</h3>
-
-<p>
-Can you solve a healthcare question before the timer runs out?
-</p>
-
-<span class="tag">COMING SOON</span>
-
-</div>
-
-
-<div class="card">
-
-<h3>👥 Team Challenges</h3>
-
-<p>
-Work with your Future Healer crew to solve healthcare-related
-problems together.
-</p>
-
-<span class="tag">COMING SOON</span>
-
-</div>
-
-</div>
-
-</main>
-
-
 <footer>
-
-<p>
-Future Healers Initiative • Pre-Med Society
-</p>
-
+<p>Future Healers Initiative × Pre-Med Society 🩺</p>
 </footer>
 
-
-<script src="script.js"></script>
-
 <script>
-
-let mysteryAnswer = null;
-
-function selectMystery(button, answer) {
-
-  mysteryAnswer = answer;
-
-  let buttons =
-    button.parentElement.querySelectorAll(".mystery-option");
-
-  buttons.forEach(function(item) {
-    item.classList.remove("selected");
-  });
-
-  button.classList.add("selected");
+function showAnswer(){
+document.getElementById("mysteryAnswer").style.display="block";
 }
-
-
-function checkMystery() {
-
-  let result = document.getElementById("mystery-result");
-
-  if (mysteryAnswer === null) {
-    result.style.display = "block";
-    result.innerHTML = "👀 Pick an answer first!";
-    return;
-  }
-
-  result.style.display = "block";
-
-  if (mysteryAnswer === "B") {
-
-    result.innerHTML =
-      "✅ Correct! Asking good questions is a big part of healthcare.";
-
-    if (!localStorage.getItem("mystery001Completed")) {
-      addPoints(2);
-      localStorage.setItem("mystery001Completed", "yes");
-    }
-
-  } else {
-
-    result.innerHTML =
-      "❌ Not quite! Think about which answer would give the healthcare team useful information.";
-
-  }
-}
-
-
-function mythAnswer(button, isFact) {
-
-  let result = document.getElementById("myth-result");
-
-  let buttons =
-    button.parentElement.querySelectorAll(".mystery-option");
-
-  buttons.forEach(function(item) {
-    item.classList.remove("selected");
-  });
-
-  button.classList.add("selected");
-
-  result.style.display = "block";
-
-  if (!isFact) {
-
-    result.innerHTML =
-      "✅ Correct! Antibiotics work against bacteria, not viruses.";
-
-    if (!localStorage.getItem("myth001Completed")) {
-      addPoints(1);
-      localStorage.setItem("myth001Completed", "yes");
-    }
-
-  } else {
-
-    result.innerHTML =
-      "❌ Not quite! Antibiotics work against bacteria, not viruses.";
-
-  }
-}
-
 </script>
 
 </body>
