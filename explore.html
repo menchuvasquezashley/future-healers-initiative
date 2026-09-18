@@ -1,246 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Healthcare | Future Healers Initiative</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>Explore Healthcare | Future Healers Initiative</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7fbfc;
-      color: #17324d;
-      line-height: 1.6;
-    }
-
-    header {
-      background: white;
-      padding: 20px 8%;
-      border-bottom: 1px solid #e5eeee;
-    }
-
-    header nav {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  flex-wrap: wrap;
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
-header a {
-  color: #17324d;
-  text-decoration: none;
-  font-weight: bold;
+body {
+font-family: Arial, sans-serif;
+background: #f7fbfc;
+color: #17324d;
+line-height: 1.6;
 }
 
-header a:hover {
-  color: #2b7a78;
+header {
+background: white;
+padding: 18px 8%;
+border-bottom: 1px solid #e5eeee;
 }
 
-    .hero {
-      text-align: center;
-      padding: 70px 8%;
-      background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
-    }
+.logo {
+font-size: 1.2rem;
+font-weight: bold;
+text-align: center;
+margin-bottom: 12px;
+}
 
-    .hero h1 {
-      font-size: 2.7rem;
-      margin-bottom: 15px;
-    }
+.logo a {
+color: #17324d;
+text-decoration: none;
+}
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      font-size: 1.1rem;
-    }
+nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 18px;
+}
 
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 8%;
-    }
+nav a {
+text-decoration: none;
+color: #17324d;
+font-size: 0.9rem;
+font-weight: bold;
+}
 
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+nav a:hover {
+color: #2b7a78;
+}
 
-    .careers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.hero {
+text-align: center;
+padding: 70px 8%;
+background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
+}
 
-    .career-card {
-      text-decoration: none;
+.hero .emoji {
+font-size: 2.5rem;
+margin-bottom: 10px;
+}
+
+.hero h1 {
+font-size: 2.7rem;
+margin-bottom: 15px;
+}
+
+.hero p {
+max-width: 650px;
+margin: auto;
+font-size: 1.1rem;
+color: #557080;
+}
+
+main {
+max-width: 1100px;
+margin: auto;
+padding: 60px 8%;
+}
+
+.intro {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.intro p {
+color: #557080;
+margin-top: 8px;
+}
+
+.careers {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.career-card {
+text-decoration: none;
 color: #17324d;
 display: block;
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
+background: white;
+padding: 25px;
+border-radius: 18px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .career-card:hover {
-      transform: translateY(-5px);
-    }
+.career-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
 
-    .career-card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
+.career-card h2 {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
 
-    .career-card p {
-      color: #4b6475;
-    }
+.career-card p {
+color: #4b6475;
+}
 
-    .quiz {
-      margin-top: 55px;
-      padding: 35px;
-      text-align: center;
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
+.available {
+margin-top: 15px;
+font-size: 0.8rem;
+font-weight: bold;
+color: #2b7a78;
+}
 
-    .quiz a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #17324d;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-    }
+.coming {
+margin-top: 15px;
+font-size: 0.8rem;
+font-weight: bold;
+color: #7b8a94;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #17324d;
-      color: white;
-    }
-  </style>
+.quiz {
+margin-top: 55px;
+padding: 35px;
+text-align: center;
+background: #eef8f8;
+border-radius: 18px;
+}
+
+.quiz p {
+color: #557080;
+margin-top: 8px;
+}
+
+.quiz a {
+display: inline-block;
+margin-top: 20px;
+padding: 12px 22px;
+background: #17324d;
+color: white;
+text-decoration: none;
+border-radius: 25px;
+font-weight: bold;
+}
+
+footer {
+text-align: center;
+padding: 30px;
+background: #17324d;
+color: white;
+}
+
+@media (max-width: 700px) {
+
+header {
+padding: 16px 7%;
+}
+
+nav {
+gap: 10px;
+}
+
+main {
+padding: 50px 7%;
+}
+
+.hero h1 {
+font-size: 2.2rem;
+}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="learn.html">Learn & Play</a>
-    <a href="ask.html">Ask</a>
-    <a href="involved.html">Get Involved</a>
-    <a href="journey.html">Journey</a>
-    <a href="impact.html">Impact</a>
-  </nav>
+
+<div class="logo">
+<a href="index.html">🩺 Future Healers Initiative</a>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="explore.html">Explore</a>
+<a href="learn.html">Learn & Play</a>
+<a href="ask.html">Ask</a>
+<a href="involved.html">Get Involved</a>
+<a href="journey.html">Journey</a>
+<a href="impact.html">Impact</a>
+</nav>
+
 </header>
 
-  <section class="hero">
-    <h1>🩺 Explore Healthcare</h1>
-    <p>
-      There isn't one way to become a future healer.
-      Explore different careers and discover where your interests could take you.
-    </p>
-  </section>
 
-  <main>
+<section class="hero">
 
-    <div class="intro">
-      <h2>Healthcare Careers</h2>
-      <p>
-        From caring for patients to solving medical mysteries through research,
-        healthcare has a place for many different interests and strengths.
-      </p>
-    </div>
+<div class="emoji">🩺 🧭 🔬</div>
 
-    <div class="careers">
+<h1>Explore Healthcare</h1>
 
-      <a href="surgeon.html" class="career-card">
-  <h2>🩺 Surgeon</h2>
-  <p>Explore surgical medicine, procedures, teamwork, and patient care.</p>
+<p>
+There isn't one way to become a future healer.
+Explore different careers and discover where your interests
+could take you.
+</p>
+
+</section>
+
+
+<main>
+
+<div class="intro">
+
+<h2>Healthcare Careers</h2>
+
+<p>
+From patient care to research and technology, healthcare has
+a place for many different interests and strengths.
+</p>
+
+</div>
+
+
+<div class="careers">
+
+<a href="surgeon.html" class="career-card">
+<h2>🩺 Surgeon</h2>
+<p>Explore surgical medicine, procedures, teamwork, and patient care.</p>
+<div class="available">● Explore now</div>
 </a>
-      
 
-      <div class="career-card">
-        <h2>🚑 Emergency Medicine Physician</h2>
-        <p>Learn about fast-paced medicine and caring for patients in emergencies.</p>
-      </div>
 
-      <div class="career-card">
-        <h2>🧸 Pediatrician</h2>
-        <p>Explore healthcare focused on infants, children, and adolescents.</p>
-      </div>
+<div class="career-card">
+<h2>🚑 Emergency Medicine Physician</h2>
+<p>Learn about fast-paced medicine and caring for patients in emergencies.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-      <div class="career-card">
-        <h2>🎗️ Oncologist</h2>
-        <p>Learn about cancer care, treatment, research, and patient support.</p>
-      </div>
 
-      <div class="career-card">
-        <h2>👩‍⚕️ Nurse</h2>
-        <p>Explore patient care, communication, teamwork, and clinical practice.</p>
-      </div>
+<div class="career-card">
+<h2>🧸 Pediatrician</h2>
+<p>Explore healthcare focused on infants, children, and adolescents.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-      <div class="career-card">
-        <h2>🩹 Physician Assistant</h2>
-        <p>Learn about diagnosing and treating patients as part of a healthcare team.</p>
-      </div>
 
-      <div class="career-card">
-        <h2>🦴 Physical Therapist</h2>
-        <p>Explore movement, rehabilitation, injury recovery, and patient goals.</p>
-      </div>
+<div class="career-card">
+<h2>🎗️ Oncologist</h2>
+<p>Learn about cancer care, treatment, research, and patient support.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-      <div class="career-card">
-        <h2>👐 Occupational Therapist</h2>
-        <p>Learn how occupational therapists help people participate in everyday activities.</p>
-      </div>
 
-      <div class="career-card">
-        <h2>🩻 Radiologic Technologist</h2>
-        <p>Explore medical imaging and the technology used to help diagnose patients.</p>
-      </div>
+<div class="career-card">
+<h2>👩‍⚕️ Nurse</h2>
+<p>Explore patient care, communication, teamwork, and clinical practice.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-      <div class="career-card">
-        <h2>🔬 Medical Researcher</h2>
-        <p>Discover how scientists investigate diseases and develop new knowledge and treatments.</p>
-      </div>
 
-      <div class="career-card">
-        <h2>💊 Pharmacist</h2>
-        <p>Explore medications, patient education, and safe and effective treatment.</p>
-      </div>
+<div class="career-card">
+<h2>🩹 Physician Assistant</h2>
+<p>Learn about diagnosing and treating patients as part of a healthcare team.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-      <div class="career-card">
-        <h2>🦷 Dentist</h2>
-        <p>Learn about oral health, prevention, diagnosis, and treatment.</p>
-      </div>
 
-    </div>
+<div class="career-card">
+<h2>🦴 Physical Therapist</h2>
+<p>Explore movement, rehabilitation, injury recovery, and patient goals.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-    <div class="quiz">
-      <h2>🧭 Not Sure Which Career Fits You?</h2>
-      <p>
-        We're creating an interactive Future Healer Career Quiz
-        to help you explore careers based on your interests.
-      </p>
 
-      <a href="#">Coming Soon</a>
-    </div>
+<div class="career-card">
+<h2>👐 Occupational Therapist</h2>
+<p>Learn how occupational therapists help people participate in everyday activities.</p>
+<div class="coming">Coming soon</div>
+</div>
 
-  </main>
 
-  <footer>
-    <p>Future Healers Initiative • Pre-Med Society</p>
-  </footer>
+<div class="career-card">
+<h2>🩻 Radiologic Technologist</h2>
+<p>Explore medical imaging and the technology used to help diagnose patients.</p>
+<div class="coming">Coming soon</div>
+</div>
+
+
+<div class="career-card">
+<h2>🔬 Medical Researcher</h2>
+<p>Discover how scientists investigate diseases and develop new knowledge.</p>
+<div class="coming">Coming soon</div>
+</div>
+
+
+<div class="career-card">
+<h2>💊 Pharmacist</h2>
+<p>Explore medications, patient education, and safe treatment.</p>
+<div class="coming">Coming soon</div>
+</div>
+
+
+<div class="career-card">
+<h2>🦷 Dentist</h2>
+<p>Learn about oral health, prevention, diagnosis, and treatment.</p>
+<div class="coming">Coming soon</div>
+</div>
+
+</div>
+
+
+<div class="quiz">
+
+<h2>🧭 Career Explorer Quiz</h2>
+
+<p>
+Not sure where to start? We're building an interactive quiz
+based on your interests, strengths, and what you enjoy doing.
+</p>
+
+<a href="#">
+Coming Soon
+</a>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>
+Future Healers Initiative • Pre-Med Society
+</p>
+
+</footer>
 
 </body>
 </html>
