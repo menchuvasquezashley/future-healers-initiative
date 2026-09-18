@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Your FHI Journey | Future Healers Initiative</title>
+<title>FHI Journey | Future Healers Initiative</title>
 
 <style>
 * {
@@ -68,13 +68,14 @@ margin-bottom: 10px;
 }
 
 .hero h1 {
-font-size: 2.8rem;
-margin-bottom: 12px;
+font-size: 2.7rem;
+margin-bottom: 15px;
 }
 
 .hero p {
-max-width: 700px;
+max-width: 650px;
 margin: auto;
+font-size: 1.1rem;
 color: #557080;
 }
 
@@ -83,6 +84,19 @@ max-width: 1050px;
 margin: auto;
 padding: 60px 8%;
 }
+
+.section-title {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.section-title p {
+color: #557080;
+margin-top: 8px;
+}
+
+
+/* JOURNEY */
 
 .steps {
 display: grid;
@@ -97,122 +111,203 @@ border-radius: 18px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.number {
+.step-number {
+font-size: 0.75rem;
 font-weight: bold;
 color: #2b7a78;
-font-size: 0.85rem;
 }
 
-.step h2 {
-margin: 8px 0;
-font-size: 1.25rem;
+.step h3 {
+margin: 5px 0;
 }
 
-.step p {
-color: #557080;
-}
 
-.points {
-margin-top: 50px;
+/* POINTS */
+
+.points-box {
+margin-top: 60px;
 background: #17324d;
 color: white;
 padding: 35px;
-border-radius: 20px;
+border-radius: 22px;
 }
 
-.points h2 {
-margin-bottom: 20px;
+.points-box h2 {
+margin-bottom: 8px;
 }
 
-.point-row {
-display: flex;
-justify-content: space-between;
-padding: 10px 0;
-border-bottom: 1px solid rgba(255,255,255,0.2);
+.points-intro {
+color: #d8e7eb;
+margin-bottom: 25px;
 }
+
+.points-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 12px;
+}
+
+.point-item {
+background: rgba(255,255,255,0.1);
+padding: 15px;
+border-radius: 12px;
+}
+
+.point-item span {
+display: block;
+font-size: 0.8rem;
+color: #c9dce1;
+}
+
+.point-item strong {
+font-size: 1.1rem;
+}
+
+
+/* CALCULATOR */
 
 .calculator {
-margin-top: 45px;
-background: #eef8f8;
-padding: 30px;
-border-radius: 18px;
+margin-top: 25px;
+background: white;
+color: #17324d;
+padding: 25px;
+border-radius: 16px;
 }
 
-.calculator label {
+.calculator h3 {
+margin-bottom: 18px;
+}
+
+.input-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+gap: 15px;
+}
+
+.input-group label {
 display: block;
-margin-top: 15px;
+font-size: 0.85rem;
 font-weight: bold;
+margin-bottom: 5px;
 }
 
-.calculator input {
+.input-group input {
 width: 100%;
-padding: 11px;
-margin-top: 5px;
-border: 1px solid #ccdadd;
-border-radius: 10px;
+padding: 10px;
+border: 1px solid #d7e3e5;
+border-radius: 8px;
 font-size: 1rem;
 }
 
-button {
+.calculate-button {
 margin-top: 20px;
 padding: 12px 22px;
 border: none;
-border-radius: 25px;
-background: #17324d;
+border-radius: 22px;
+background: #2b7a78;
 color: white;
 font-weight: bold;
 cursor: pointer;
 }
 
-button:hover {
-background: #2b7a78;
-}
-
-#total {
+.total {
 margin-top: 20px;
+padding: 18px;
+background: #eef8f8;
+border-radius: 12px;
+}
+
+.total strong {
 font-size: 1.5rem;
-font-weight: bold;
 }
 
-.checkpoint {
-margin-top: 45px;
-background: white;
-padding: 30px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.checkpoint ul {
-margin: 18px 0 0 20px;
+#badge-message {
+margin-top: 8px;
 color: #557080;
 }
 
+
+/* BADGES */
+
 .badges {
-margin-top: 45px;
+margin-top: 65px;
 }
 
 .badge-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-gap: 15px;
-margin-top: 20px;
+gap: 18px;
 }
 
 .badge {
 background: white;
-padding: 20px;
-border-radius: 15px;
+padding: 25px 18px;
+border-radius: 18px;
 text-align: center;
 box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+border: 2px solid transparent;
 }
 
-.badge span {
-font-size: 2rem;
+.badge-icon {
+font-size: 2.5rem;
+margin-bottom: 8px;
+}
+
+.badge h3 {
+margin-bottom: 5px;
 }
 
 .badge p {
+font-size: 0.82rem;
+color: #557080;
+}
+
+.badge.locked {
+opacity: 0.45;
+filter: grayscale(1);
+}
+
+.badge.unlocked {
+border-color: #2b7a78;
+}
+
+.badge-status {
+display: inline-block;
+margin-top: 12px;
+padding: 5px 10px;
+border-radius: 15px;
+font-size: 0.72rem;
 font-weight: bold;
-margin-top: 8px;
+background: #edf1f2;
+}
+
+.badge.unlocked .badge-status {
+background: #d9eeee;
+color: #17324d;
+}
+
+
+/* CHECKPOINT */
+
+.checkpoint {
+margin-top: 65px;
+background: #eef8f8;
+padding: 30px;
+border-radius: 20px;
+}
+
+.checkpoint h2 {
+margin-bottom: 10px;
+}
+
+.checkpoint p {
+color: #557080;
+margin-bottom: 15px;
+}
+
+.checkpoint ul {
+padding-left: 20px;
+color: #557080;
 }
 
 footer {
@@ -223,6 +318,10 @@ color: white;
 }
 
 @media (max-width: 700px) {
+
+header {
+padding: 16px 7%;
+}
 
 nav {
 gap: 10px;
@@ -235,9 +334,15 @@ padding: 50px 7%;
 .hero h1 {
 font-size: 2.2rem;
 }
+
+.points-box {
+padding: 25px;
+}
+
 }
 </style>
 </head>
+
 
 <body>
 
@@ -267,8 +372,8 @@ font-size: 2.2rem;
 <h1>Your FHI Journey</h1>
 
 <p>
-Your FHI journey isn't about checking boxes. It's about
-what you explore, what you try, who you help, and how you grow.
+Explore healthcare, try new things, serve your community,
+and see where your Future Healer journey takes you.
 </p>
 
 </section>
@@ -277,176 +382,294 @@ what you explore, what you try, who you help, and how you grow.
 <main>
 
 
+<!-- HOW IT WORKS -->
+
+<div class="section-title">
+
 <h2>🚀 How It Works</h2>
+
+<p>
+There isn't one right way to do FHI. Start wherever you want.
+</p>
+
+</div>
+
 
 <div class="steps">
 
 <div class="step">
-<div class="number">01</div>
-<h2>Explore</h2>
-<p>Discover healthcare careers, people, and possibilities.</p>
+<div class="step-number">01</div>
+<h3>🔎 Explore</h3>
+<p>Learn about healthcare careers and discover what interests you.</p>
 </div>
 
+
 <div class="step">
-<div class="number">02</div>
-<h2>Participate</h2>
+<div class="step-number">02</div>
+<h3>🩺 Participate</h3>
 <p>Join activities, workshops, challenges, and events.</p>
 </div>
 
-<div class="step">
-<div class="number">03</div>
-<h2>Serve</h2>
-<p>Use your time and skills to contribute to your community.</p>
-</div>
 
 <div class="step">
-<div class="number">04</div>
-<h2>Lead</h2>
-<p>Take initiative and help create opportunities for others.</p>
+<div class="step-number">03</div>
+<h3>🤝 Serve</h3>
+<p>Use what you learn to help your school and community.</p>
+</div>
+
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>👑 Lead</h3>
+<p>Take initiative, help others, and create something of your own.</p>
 </div>
 
 </div>
 
 
-<div class="points">
+<!-- POINTS -->
+
+<div class="points-box">
 
 <h2>⭐ FHI Points</h2>
 
-<div class="point-row">
+<p class="points-intro">
+The more you participate, the more points you can earn.
+</p>
+
+
+<div class="points-grid">
+
+<div class="point-item">
 <span>Attend a meeting</span>
 <strong>+1</strong>
 </div>
 
-<div class="point-row">
+<div class="point-item">
 <span>Complete an FHI activity</span>
 <strong>+2</strong>
 </div>
 
-<div class="point-row">
+<div class="point-item">
 <span>Complete a challenge</span>
 <strong>+1</strong>
 </div>
 
-<div class="point-row">
+<div class="point-item">
 <span>Service</span>
 <strong>+3</strong>
 </div>
 
-<div class="point-row">
+<div class="point-item">
 <span>Leadership / helping</span>
 <strong>+3</strong>
 </div>
 
-<div class="point-row">
+<div class="point-item">
 <span>Healthcare workshop</span>
 <strong>+2</strong>
 </div>
 
-<div class="point-row">
+<div class="point-item">
 <span>Reflection</span>
 <strong>+1</strong>
 </div>
 
-<p style="margin-top:20px;">
-🎟️ Every 10 points = 1 raffle entry
+</div>
+
+
+<!-- CALCULATOR -->
+
+<div class="calculator">
+
+<h3>🧮 Try the Points Calculator</h3>
+
+<div class="input-grid">
+
+<div class="input-group">
+<label>Meetings</label>
+<input type="number" id="meetings" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>FHI Activities</label>
+<input type="number" id="activities" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>Challenges</label>
+<input type="number" id="challenges" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>Service</label>
+<input type="number" id="service" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>Leadership / Helping</label>
+<input type="number" id="leadership" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>Workshops</label>
+<input type="number" id="workshops" min="0" value="0">
+</div>
+
+<div class="input-group">
+<label>Reflections</label>
+<input type="number" id="reflections" min="0" value="0">
+</div>
+
+</div>
+
+
+<button class="calculate-button" onclick="calculatePoints()">
+Calculate My Points →
+</button>
+
+
+<div class="total">
+
+<div>
+Your total:
+<strong id="total-points">0</strong> points
+</div>
+
+<div id="raffle"></div>
+
+<div id="badge-message">
+Add your activities to see which badges you unlock!
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BADGES -->
+
+<div class="badges">
+
+<div class="section-title">
+
+<h2>🏅 FHI Badges</h2>
+
+<p>
+Little milestones for the things you actually do.
 </p>
 
 </div>
 
 
-<div class="calculator">
+<div class="badge-grid">
 
-<h2>🧮 Calculate Your Points</h2>
 
-<label>Meetings attended</label>
-<input type="number" id="meetings" min="0" value="0">
+<div class="badge" id="badge-explorer">
 
-<label>FHI activities completed</label>
-<input type="number" id="activities" min="0" value="0">
+<div class="badge-icon">🔎</div>
 
-<label>Challenges completed</label>
-<input type="number" id="challenges" min="0" value="0">
+<h3>Explorer</h3>
 
-<label>Service activities</label>
-<input type="number" id="service" min="0" value="0">
+<p>
+Start your Future Healer journey.
+</p>
 
-<label>Leadership/helping activities</label>
-<input type="number" id="leadership" min="0" value="0">
+<div class="badge-status">🔒 Locked</div>
 
-<label>Healthcare workshops</label>
-<input type="number" id="workshops" min="0" value="0">
+</div>
 
-<label>Reflections completed</label>
-<input type="number" id="reflections" min="0" value="0">
 
-<button onclick="calculatePoints()">
-Calculate →
-</button>
+<div class="badge" id="badge-healer">
 
-<div id="total">
-Your points: 0
+<div class="badge-icon">🩺</div>
+
+<h3>Future Healer</h3>
+
+<p>
+Reach 5 FHI points.
+</p>
+
+<div class="badge-status">🔒 Locked</div>
+
+</div>
+
+
+<div class="badge" id="badge-helper">
+
+<div class="badge-icon">🤝</div>
+
+<h3>Community Helper</h3>
+
+<p>
+Reach 10 FHI points.
+</p>
+
+<div class="badge-status">🔒 Locked</div>
+
+</div>
+
+
+<div class="badge" id="badge-healthcare">
+
+<div class="badge-icon">🔬</div>
+
+<h3>Healthcare Explorer</h3>
+
+<p>
+Reach 15 FHI points.
+</p>
+
+<div class="badge-status">🔒 Locked</div>
+
+</div>
+
+
+<div class="badge" id="badge-leader">
+
+<div class="badge-icon">👑</div>
+
+<h3>Leader</h3>
+
+<p>
+Reach 20 FHI points.
+</p>
+
+<div class="badge-status">🔒 Locked</div>
+
 </div>
 
 </div>
 
+</div>
+
+
+<!-- CHECKPOINT -->
 
 <div class="checkpoint">
 
-<h2>📝 FHI Checkpoint</h2>
+<h2>📝 Future Healer Checkpoint</h2>
 
 <p>
-After activities, reflect on your experience.
+After an activity, take a minute to think about what you actually got out of it.
 </p>
 
 <ul>
 
-<li>How much did you enjoy the activity? (1–5)</li>
+<li>How much did you enjoy the activity? ⭐ 1–5</li>
 
-<li>How much did you learn? (1–5)</li>
+<li>How much did you learn? 🧠 1–5</li>
 
 <li>What is one thing you learned or found interesting?</li>
 
-<li>Would you want to do something like this again?</li>
+<li>Would you want to do something like this again? Yes / Maybe / No</li>
 
 </ul>
 
 </div>
 
-
-<div class="badges">
-
-<h2>🏅 Badges & Recognition</h2>
-
-<div class="badge-grid">
-
-<div class="badge">
-<span>🧭</span>
-<p>Explorer</p>
-</div>
-
-<div class="badge">
-<span>🩺</span>
-<p>Future Healer</p>
-</div>
-
-<div class="badge">
-<span>❤️</span>
-<p>Community Helper</p>
-</div>
-
-<div class="badge">
-<span>⭐</span>
-<p>Leader</p>
-</div>
-
-<div class="badge">
-<span>🔬</span>
-<p>Healthcare Explorer</p>
-</div>
-
-</div>
-
-</div>
 
 </main>
 
@@ -462,28 +685,24 @@ Future Healers Initiative • Pre-Med Society
 
 <script>
 
+function getValue(id) {
+
+let value = Number(document.getElementById(id).value);
+
+return value < 0 ? 0 : value;
+
+}
+
+
 function calculatePoints() {
 
-let meetings =
-Number(document.getElementById("meetings").value);
-
-let activities =
-Number(document.getElementById("activities").value);
-
-let challenges =
-Number(document.getElementById("challenges").value);
-
-let service =
-Number(document.getElementById("service").value);
-
-let leadership =
-Number(document.getElementById("leadership").value);
-
-let workshops =
-Number(document.getElementById("workshops").value);
-
-let reflections =
-Number(document.getElementById("reflections").value);
+let meetings = getValue("meetings");
+let activities = getValue("activities");
+let challenges = getValue("challenges");
+let service = getValue("service");
+let leadership = getValue("leadership");
+let workshops = getValue("workshops");
+let reflections = getValue("reflections");
 
 
 let total =
@@ -496,12 +715,111 @@ let total =
 (reflections * 1);
 
 
+document.getElementById("total-points").textContent = total;
+
+
 let raffleEntries = Math.floor(total / 10);
 
-document.getElementById("total").innerHTML =
-"⭐ Your points: " + total +
-"<br><span style='font-size:1rem;'>🎟️ Raffle entries: " +
-raffleEntries + "</span>";
+document.getElementById("raffle").innerHTML =
+"🎟️ Raffle entries: <strong>" + raffleEntries + "</strong>";
+
+
+updateBadges(total);
+
+}
+
+
+function unlockBadge(id) {
+
+let badge = document.getElementById(id);
+
+badge.classList.remove("locked");
+badge.classList.add("unlocked");
+
+badge.querySelector(".badge-status").textContent =
+"✓ Unlocked";
+
+}
+
+
+function lockBadge(id) {
+
+let badge = document.getElementById(id);
+
+badge.classList.remove("unlocked");
+badge.classList.add("locked");
+
+badge.querySelector(".badge-status").textContent =
+"🔒 Locked";
+
+}
+
+
+function updateBadges(points) {
+
+lockBadge("badge-explorer");
+lockBadge("badge-healer");
+lockBadge("badge-helper");
+lockBadge("badge-healthcare");
+lockBadge("badge-leader");
+
+
+if (points >= 1) {
+unlockBadge("badge-explorer");
+}
+
+if (points >= 5) {
+unlockBadge("badge-healer");
+}
+
+if (points >= 10) {
+unlockBadge("badge-helper");
+}
+
+if (points >= 15) {
+unlockBadge("badge-healthcare");
+}
+
+if (points >= 20) {
+unlockBadge("badge-leader");
+}
+
+
+let message =
+document.getElementById("badge-message");
+
+
+if (points === 0) {
+
+message.textContent =
+"Start exploring to unlock your first badge! 🔎";
+
+} else if (points < 5) {
+
+message.textContent =
+"You're on your way! Keep participating to unlock Future Healer. 🩺";
+
+} else if (points < 10) {
+
+message.textContent =
+"Future Healer unlocked! Keep going. 👀";
+
+} else if (points < 15) {
+
+message.textContent =
+"Community Helper unlocked! You're building momentum. 🤝";
+
+} else if (points < 20) {
+
+message.textContent =
+"Healthcare Explorer unlocked! One more badge is waiting. 🔬";
+
+} else {
+
+message.textContent =
+"👑 Leader unlocked! Look at you, Future Healer.";
+
+}
 
 }
 
