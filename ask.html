@@ -2,223 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ask | Future Healers Initiative</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ask | FHI</title>
 
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: Arial, sans-serif;
-background: #f7fbfc;
-color: #17324d;
-line-height: 1.6;
-}
-
-header {
-background: white;
-padding: 18px 8%;
-border-bottom: 1px solid #e5eeee;
-}
-
-.logo {
-font-size: 1.2rem;
-font-weight: bold;
-text-align: center;
-margin-bottom: 12px;
-}
-
-.logo a {
-color: #17324d;
-text-decoration: none;
-}
-
-nav {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 18px;
-}
-
-nav a {
-text-decoration: none;
-color: #17324d;
-font-size: 0.9rem;
-font-weight: bold;
-}
-
-nav a:hover {
-color: #2b7a78;
-}
-
-.hero {
-text-align: center;
-padding: 70px 8%;
-background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
-}
-
-.hero .emoji {
-font-size: 2.5rem;
-margin-bottom: 10px;
-}
-
-.hero h1 {
-font-size: 2.8rem;
-margin-bottom: 12px;
-}
-
-.hero p {
-max-width: 700px;
-margin: auto;
-color: #557080;
-}
-
-main {
-max-width: 1000px;
-margin: auto;
-padding: 60px 8%;
-}
-
-.cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 22px;
-}
-
-.card {
-background: white;
-padding: 28px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.card h2 {
-margin-bottom: 10px;
-}
-
-.card p {
-color: #557080;
-}
-
-.question-box {
-margin-top: 40px;
-background: #eef8f8;
-padding: 30px;
-border-radius: 18px;
-}
-
-.question-box h2 {
-margin-bottom: 10px;
-}
-
-.question-list {
-margin: 18px 0 0 20px;
-color: #557080;
-}
-
-.form-box {
-margin-top: 35px;
-background: white;
-padding: 30px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.form-box h2 {
-margin-bottom: 8px;
-}
-
-label {
-display: block;
-margin-top: 18px;
-margin-bottom: 6px;
-font-weight: bold;
-}
-
-input,
-select,
-textarea {
-width: 100%;
-padding: 12px;
-border: 1px solid #ccdadd;
-border-radius: 10px;
-font-family: Arial, sans-serif;
-font-size: 1rem;
-}
-
-textarea {
-min-height: 120px;
-resize: vertical;
-}
-
-button {
-margin-top: 20px;
-padding: 12px 22px;
-border: none;
-border-radius: 25px;
-background: #17324d;
-color: white;
-font-weight: bold;
-cursor: pointer;
-}
-
-button:hover {
-background: #2b7a78;
-}
-
-.note {
-margin-top: 12px;
-font-size: 0.85rem;
-color: #6a7c87;
-}
-
-#submitted {
-display: none;
-margin-top: 20px;
-padding: 15px;
-background: #e8f7f7;
-border-radius: 12px;
-font-weight: bold;
-}
-
-footer {
-text-align: center;
-padding: 30px;
-background: #17324d;
-color: white;
-}
-
-@media (max-width: 700px) {
-
-nav {
-gap: 10px;
-}
-
-main {
-padding: 50px 7%;
-}
-
-.hero h1 {
-font-size: 2.2rem;
-}
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f8fb;color:#172b3a;line-height:1.6}
+nav{background:#0d2942;padding:15px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{color:white;font-weight:bold}
+nav a{color:#dcebf5;text-decoration:none;margin:0 6px;font-size:14px}
+.hero{text-align:center;padding:65px 20px;background:#e5f2f8}
+.hero h1{font-size:48px;color:#0d2942}
+section{max-width:950px;margin:auto;padding:55px 20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:white;padding:27px;border-radius:18px;box-shadow:0 4px 15px rgba(13,41,66,.08)}
+h2{color:#0d2942}
+h3{color:#0d5c82}
+a.button{display:inline-block;background:#0d5c82;color:white;padding:12px 17px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:15px}
+footer{background:#0d2942;color:white;text-align:center;padding:30px}
+@media(max-width:700px){nav{justify-content:center}.hero h1{font-size:38px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-<a href="index.html">🩺 Future Healers Initiative</a>
-</div>
-
 <nav>
+<div class="logo">🩺 Future Healers Initiative</div>
+<div>
 <a href="index.html">Home</a>
 <a href="explore.html">Explore</a>
 <a href="learn.html">Learn & Play</a>
@@ -226,154 +36,61 @@ font-size: 2.2rem;
 <a href="involved.html">Get Involved</a>
 <a href="journey.html">Journey</a>
 <a href="impact.html">Impact</a>
+</div>
 </nav>
 
+<header class="hero">
+<h1>💬 🩺 👩‍⚕️ Ask</h1>
+<p>Questions are literally part of exploring healthcare.</p>
 </header>
 
+<section>
 
-<section class="hero">
+<div class="grid">
 
-<div class="emoji">💬 🩺 👩‍⚕️</div>
-
-<h1>Ask</h1>
-
+<div class="card">
+<h2>🩺 Ask a Future Healer</h2>
 <p>
-Questions are part of exploring healthcare. Ask about careers,
-experiences, opportunities, or what you wish you knew sooner.
+Wondering what it's actually like to be a student interested in healthcare?
+Ask about classes, activities, volunteering, goals, or anything else.
 </p>
+
+<h3 style="margin-top:20px">Question ideas</h3>
+<ul style="margin:10px 0 0 20px">
+<li>What made you interested in healthcare?</li>
+<li>What's your favorite healthcare-related activity?</li>
+<li>What do you wish you knew earlier?</li>
+<li>How do you balance school and everything else?</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>👩‍⚕️ Ask a Healthcare Professional</h2>
+<p>
+Have a question about a healthcare career? Add it to the FHI question bank so we can use
+questions for future Q&As and interviews.
+</p>
+
+<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScDvi18-FTC0REi-z5UHrffj7lLlC1U2MZXN1f0Lw4Y_a5Ntw/viewform" target="_blank">
+Join Pre-Med / Ask → 
+</a>
+</div>
+
+</div>
+
+<div class="card" style="margin-top:25px">
+<h2>💡 Have a Question?</h2>
+<p>
+You can also bring questions to meetings, workshops, or future healthcare-professional Q&As.
+FHI is supposed to be a place where it's okay to say, “Wait... I don't understand this.”
+</p>
+</div>
 
 </section>
 
-
-<main>
-
-<div class="cards">
-
-<div class="card">
-
-<h2>🧑‍🎓 Ask a Future Healer</h2>
-
-<p>
-Curious what another student interested in healthcare is
-actually doing? Submit a question for a Future Healer.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>👩‍⚕️ Ask a Healthcare Professional</h2>
-
-<p>
-Have a question for someone working in healthcare? Submit it
-and we'll collect questions for future healthcare-professional
-Q&As.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="question-box">
-
-<h2>💡 Need an idea?</h2>
-
-<ul class="question-list">
-
-<li>What is this healthcare career actually like?</li>
-
-<li>How did you know this was the career for you?</li>
-
-<li>What should I do in high school if I'm interested in healthcare?</li>
-
-<li>What experiences helped you get where you are?</li>
-
-<li>What do you wish you knew when you were my age?</li>
-
-</ul>
-
-</div>
-
-
-<div class="form-box">
-
-<h2>💬 Submit a Question</h2>
-
-<p class="note">
-Your question can be about healthcare careers, high school,
-college, experiences, or anything you're curious about.
-</p>
-
-<form onsubmit="submitQuestion(event)">
-
-<label for="name">Name (optional)</label>
-
-<input
-type="text"
-id="name"
-placeholder="Your name"
->
-
-
-<label for="questionType">Who is your question for?</label>
-
-<select id="questionType">
-
-<option>Future Healer / Student</option>
-<option>Healthcare Professional</option>
-<option>Either</option>
-
-</select>
-
-
-<label for="question">Your question</label>
-
-<textarea
-id="question"
-placeholder="Type your question here..."
-required
-></textarea>
-
-
-<button type="submit">
-Submit Question →
-</button>
-
-</form>
-
-<div id="submitted">
-✅ Your question was submitted for this website prototype!
-</div>
-
-</div>
-
-</main>
-
-
 <footer>
-
-<p>
-Future Healers Initiative • Pre-Med Society
-</p>
-
+<p>Future Healers Initiative × Pre-Med Society 🩺</p>
 </footer>
-
-
-<script>
-
-function submitQuestion(event) {
-
-event.preventDefault();
-
-document.getElementById("submitted").style.display = "block";
-
-event.target.reset();
-
-}
-
-</script>
 
 </body>
 </html>
