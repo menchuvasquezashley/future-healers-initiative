@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Future Healers Initiative</title>
 
 <style>
@@ -21,7 +22,7 @@ line-height: 1.6;
 
 header {
 background: white;
-padding: 20px 8%;
+padding: 18px 8%;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -32,15 +33,31 @@ z-index: 10;
 }
 
 .logo {
-font-size: 1.3rem;
+font-size: 1.2rem;
 font-weight: bold;
+}
+
+.logo a {
+color: #17324d;
+text-decoration: none;
+}
+
+nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 18px;
 }
 
 nav a {
 text-decoration: none;
 color: #17324d;
-margin-left: 20px;
-font-size: 0.95rem;
+font-size: 0.9rem;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #2b7a78;
 }
 
 .hero {
@@ -49,15 +66,21 @@ text-align: center;
 background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
 }
 
+.hero-emoji {
+font-size: 3rem;
+margin-bottom: 12px;
+}
+
 .hero h1 {
 font-size: 3rem;
 margin-bottom: 15px;
 }
 
 .hero p {
-max-width: 700px;
+max-width: 720px;
 margin: 0 auto 25px;
 font-size: 1.15rem;
+color: #4b6475;
 }
 
 .button {
@@ -70,6 +93,10 @@ border-radius: 25px;
 font-weight: bold;
 }
 
+.button:hover {
+background: #2b7a78;
+}
+
 section {
 padding: 65px 8%;
 max-width: 1100px;
@@ -78,7 +105,12 @@ margin: auto;
 
 section h2 {
 font-size: 2rem;
-margin-bottom: 20px;
+margin-bottom: 15px;
+}
+
+.section-intro {
+color: #557080;
+max-width: 700px;
 }
 
 .mission {
@@ -94,6 +126,10 @@ margin-top: 20px;
 margin-bottom: 8px;
 }
 
+.mission h3:first-child {
+margin-top: 0;
+}
+
 .cards {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -104,8 +140,60 @@ margin-top: 30px;
 .card {
 background: white;
 padding: 25px;
-border-radius: 16px;
+border-radius: 18px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card-link {
+text-decoration: none;
+color: #17324d;
+display: block;
+}
+
+.card h3 {
+margin-bottom: 8px;
+}
+
+.card p {
+color: #557080;
+}
+
+.pathway {
+background: #17324d;
+color: white;
+text-align: center;
+border-radius: 20px;
+padding: 40px;
+margin-top: 30px;
+}
+
+.pathway p {
+margin-top: 10px;
+opacity: 0.9;
+}
+
+.pathway span {
+display: inline-block;
+margin-top: 20px;
+font-weight: bold;
+}
+
+.impact-preview {
+background: #eef8f8;
+border-radius: 20px;
+padding: 35px;
+margin-top: 30px;
+}
+
+.impact-preview p {
+color: #557080;
+margin-bottom: 18px;
 }
 
 footer {
@@ -116,17 +204,26 @@ color: white;
 }
 
 @media (max-width: 700px) {
+
 header {
 flex-direction: column;
+gap: 12px;
+}
+
+nav {
 gap: 10px;
 }
 
-nav a {
-margin: 0 7px;
+.hero {
+padding: 65px 7%;
 }
 
 .hero h1 {
 font-size: 2.2rem;
+}
+
+section {
+padding: 50px 7%;
 }
 }
 </style>
@@ -135,7 +232,10 @@ font-size: 2.2rem;
 <body>
 
 <header>
-<div class="logo">🩺 Future Healers Initiative</div>
+
+<div class="logo">
+<a href="index.html">🩺 Future Healers Initiative</a>
+</div>
 
 <nav>
 <a href="index.html">Home</a>
@@ -146,114 +246,187 @@ font-size: 2.2rem;
 <a href="journey.html">Journey</a>
 <a href="impact.html">Impact</a>
 </nav>
+
 </header>
+
 
 <main>
 
 <section class="hero">
+
+<div class="hero-emoji">🦫 🩺 🐀</div>
+
 <h1>Future Healers Initiative</h1>
 
 <p>
-Making healthcare exploration hands-on, meaningful, and fun.
+Healthcare exploration should be more than sitting in a room
+and listening to someone talk. FHI gives students ways to
+explore, participate, serve, and lead.
 </p>
 
-<a class="button" href="explore.html">Start Exploring</a>
+<a class="button" href="explore.html">Start Exploring →</a>
+
 </section>
 
-<section id="about">
-<h2>What is FHI?</h2>
 
-<p>
-The Future Healers Initiative is a student-led initiative within
-Pre-Med Society designed to make exploring healthcare careers more
-interactive, hands-on, and meaningful for students.
+<section>
+
+<h2>💙 What is FHI?</h2>
+
+<p class="section-intro">
+The Future Healers Initiative is a student-led initiative
+within Pre-Med Society designed to make exploring healthcare
+careers more interactive, hands-on, and meaningful.
 </p>
 
 <div class="mission">
+
 <h3>Our Mission</h3>
 
 <p>
-Transform the Pre-Med Society into a more interactive healthcare
-exploration community.
+Transform the Pre-Med Society into a more interactive
+healthcare exploration community.
 </p>
 
 <h3>Our Vision</h3>
 
 <p>
 Create a school environment where students explore healthcare
-careers through hands-on experiences, leadership, service, and
-mentorship.
+careers through hands-on experiences, leadership, service,
+and mentorship.
 </p>
+
 </div>
+
 </section>
 
-<section id="explore">
-<h2>Explore Healthcare</h2>
 
-<p>
-Discover different healthcare careers and explore where your
-interests could take you.
+<section>
+
+<h2>🩺 Explore Healthcare</h2>
+
+<p class="section-intro">
+There isn't one way to become a future healer. Explore careers,
+discover different paths, and learn from people in healthcare.
 </p>
 
 <div class="cards">
-<div class="card">
+
+<a href="explore.html" class="card card-link">
 <h3>🩺 Healthcare Careers</h3>
-<p>Explore careers across medicine and healthcare.</p>
-</div>
+<p>Explore different careers across medicine and healthcare.</p>
+</a>
 
-<div class="card">
+<a href="explore.html" class="card card-link">
 <h3>🧭 Career Explorer</h3>
-<p>Find careers that match your interests and strengths.</p>
+<p>Start thinking about which healthcare paths interest you.</p>
+</a>
+
+<a href="ask.html" class="card card-link">
+<h3>👩‍⚕️ Meet Healthcare Professionals</h3>
+<p>Learn about real healthcare journeys and experiences.</p>
+</a>
+
 </div>
 
-<div class="card">
-<h3>👩‍⚕️ Meet Healthcare Professionals</h3>
-<p>Learn from real people working in healthcare.</p>
-</div>
-</div>
 </section>
 
-<section id="learn">
-<h2>Learn & Play</h2>
 
-<p>
-Healthcare exploration doesn't have to mean sitting and listening.
-Try interactive challenges, medical mysteries, anatomy activities,
-and more.
+<section>
+
+<h2>🧠 Learn & Play</h2>
+
+<p class="section-intro">
+Try something instead of just reading about it. Solve cases,
+test your knowledge, and take on healthcare challenges.
 </p>
 
 <div class="cards">
-<div class="card">
+
+<a href="learn.html" class="card card-link">
 <h3>🧩 Medical Mysteries</h3>
-<p>Can you solve the case?</p>
-</div>
+<p>Get the clues. Work through the case. See what you can figure out.</p>
+</a>
 
-<div class="card">
+<a href="learn.html" class="card card-link">
 <h3>🦴 Anatomy Challenges</h3>
-<p>Test your anatomy knowledge.</p>
+<p>Test your knowledge through games and challenges.</p>
+</a>
+
+<a href="learn.html" class="card card-link">
+<h3>🧠 Medical Myth or Fact</h3>
+<p>Think you know healthcare? Put it to the test.</p>
+</a>
+
 </div>
 
-<div class="card">
-<h3>🧠 Medical Myth or Fact</h3>
-<p>Test what you know about healthcare.</p>
-</div>
-</div>
 </section>
 
-<section id="impact">
-<h2>Our Impact</h2>
+
+<section>
+
+<div class="pathway">
+
+<h2>🚀 The Future Healer Path</h2>
 
 <p>
-Follow FHI's projects, service work, student experiences, and
-impact throughout the year.
+Explore → Participate → Serve → Lead
 </p>
+
+<span>
+Your journey doesn't have to look like anyone else's.
+</span>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>🧭 Your FHI Journey</h2>
+
+<p class="section-intro">
+Keep track of the things you explore, activities you complete,
+service you participate in, and ways you take leadership.
+</p>
+
+<div style="margin-top: 20px;">
+<a class="button" href="journey.html">Explore Your Journey →</a>
+</div>
+
+</section>
+
+
+<section>
+
+<div class="impact-preview">
+
+<h2>📈 Our Impact</h2>
+
+<p>
+FHI is just getting started. As the year goes on, we'll track
+the activities, service projects, student experiences, and
+connections we build together.
+</p>
+
+<a class="button" href="impact.html">See Our Impact →</a>
+
+</div>
+
 </section>
 
 </main>
 
+
 <footer>
-<p>Future Healers Initiative • Pre-Med Society</p>
+
+<p>
+Future Healers Initiative • Pre-Med Society
+</p>
+
 </footer>
 
 </body>
+</html>
 </html>
