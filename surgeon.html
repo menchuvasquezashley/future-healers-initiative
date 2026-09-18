@@ -1,249 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Surgeon | FHI</title>
 
-  <title>Surgeon | Future Healers Initiative</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8fc;
-      color: #172b4d;
-    }
-
-    header {
-      background: #102a43;
-      color: white;
-      padding: 18px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav {
-      margin-top: 12px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 5px;
-      font-size: 14px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 45px 20px;
-      background: #dceefa;
-    }
-
-    .hero .emoji {
-      font-size: 45px;
-    }
-
-    .hero h2 {
-      font-size: 38px;
-      margin: 10px 0;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      line-height: 1.6;
-      font-size: 17px;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 24px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      border: 1px solid #d5e2ee;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .card p,
-    .card li {
-      line-height: 1.6;
-    }
-
-    .facts {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-
-    .fact {
-      background: #e8f3fa;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .fact strong {
-      display: block;
-      margin-bottom: 7px;
-      font-size: 18px;
-    }
-
-    .buttons {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .button {
-      display: inline-block;
-      background: #1769aa;
-      color: white;
-      text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      margin: 5px;
-    }
-
-    footer {
-      background: #102a43;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-
-    @media (max-width: 650px) {
-      .facts {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h2 {
-        font-size: 30px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-    }
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f8fb;color:#172b3a;line-height:1.6}
+nav{background:#0d2942;padding:15px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{color:white;font-weight:bold}
+nav a{color:#dcebf5;text-decoration:none;margin:0 6px;font-size:14px}
+.hero{text-align:center;background:#e5f2f8;padding:65px 20px}
+.hero h1{font-size:50px;color:#0d2942}
+section{max-width:900px;margin:auto;padding:55px 20px}
+.card{background:white;padding:25px;border-radius:18px;margin-top:20px;box-shadow:0 4px 15px rgba(13,41,66,.08)}
+h2{color:#0d2942}
+h3{color:#0d5c82}
+ul{margin:10px 0 0 22px}
+.button{display:inline-block;background:#0d5c82;color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:20px}
+footer{background:#0d2942;color:white;text-align:center;padding:30px}
+@media(max-width:700px){nav{justify-content:center}.hero h1{font-size:40px}}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>🩺 Future Healers Initiative</h1>
+<nav>
+<div class="logo">🩺 Future Healers Initiative</div>
+<div>
+<a href="index.html">Home</a>
+<a href="explore.html">Explore</a>
+<a href="learn.html">Learn & Play</a>
+<a href="ask.html">Ask</a>
+<a href="involved.html">Get Involved</a>
+<a href="journey.html">Journey</a>
+<a href="impact.html">Impact</a>
+</div>
+</nav>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="learn.html">Learn & Play</a>
-    <a href="ask.html">Ask</a>
-    <a href="involved.html">Get Involved</a>
-    <a href="journey.html">Journey</a>
-    <a href="impact.html">Impact</a>
-  </nav>
+<header class="hero">
+<h1>🩺 Surgeon</h1>
+<p>A healthcare career focused on treating certain conditions through surgical procedures.</p>
 </header>
 
-<section class="hero">
-  <div class="emoji">🩺</div>
+<section>
 
-  <h2>Surgeon</h2>
+<div class="card">
+<h2>What do they do?</h2>
+<p>
+Surgeons evaluate patients, work with healthcare teams, perform operations, and help patients
+through recovery.
+</p>
+</div>
 
-  <p>
-    Surgeons are doctors who perform operations to treat certain injuries,
-    diseases, and other medical conditions.
-  </p>
+<div class="card">
+<h2>🏥 Where do they work?</h2>
+<p>
+Hospitals, surgical centers, clinics, and other healthcare settings.
+</p>
+</div>
+
+<div class="card">
+<h2>👥 Who do they work with?</h2>
+<p>
+Surgeons work with nurses, anesthesiologists, physician assistants, technicians, and many other
+healthcare professionals.
+</p>
+</div>
+
+<div class="card">
+<h2>🎓 Education Path</h2>
+<ul>
+<li>High school</li>
+<li>College / undergraduate degree</li>
+<li>Medical school</li>
+<li>Surgical residency</li>
+<li>Additional training depending on specialty</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🧠 Skills</h2>
+<ul>
+<li>Problem solving</li>
+<li>Attention to detail</li>
+<li>Communication</li>
+<li>Teamwork</li>
+<li>Hand skills and coordination</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💭 Think About It</h2>
+<p>
+Would you enjoy a career that combines science, teamwork, decision-making, and hands-on work?
+</p>
+</div>
+
+<a class="button" href="explore.html">← Back to Explore</a>
+
 </section>
 
-<main class="container">
-
-  <div class="facts">
-
-    <div class="fact">
-      <strong>🏥 Where do they work?</strong>
-      Hospitals, surgical centers, and clinics.
-    </div>
-
-    <div class="fact">
-      <strong>👥 Who do they work with?</strong>
-      Nurses, anesthesiologists, surgical technologists, and other healthcare professionals.
-    </div>
-
-  </div>
-
-  <div class="card">
-    <h3>🩺 What do they do?</h3>
-
-    <p>
-      Surgeons meet with patients, help plan treatment, perform procedures,
-      and follow up with patients afterward.
-    </p>
-
-    <p>
-      There are also many different types of surgeons, so their work can
-      look very different depending on their specialty.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>📚 Education Path</h3>
-
-    <ol>
-      <li>High school</li>
-      <li>College</li>
-      <li>Medical school</li>
-      <li>Residency and surgical training</li>
-    </ol>
-
-    <p>
-      Becoming a surgeon takes many years of education and training.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🧠 Skills that can help</h3>
-
-    <ul>
-      <li>Problem-solving</li>
-      <li>Teamwork</li>
-      <li>Communication</li>
-      <li>Focus and attention to detail</li>
-      <li>Being comfortable with hands-on work</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>💭 Think About It</h3>
-
-    <p>
-      Would you enjoy solving problems, working with a team, and doing
-      hands-on work?
-    </p>
-
-    <p>
-      If so, surgery could be a career worth exploring more.
-    </p>
-  </div>
-
-  <div class="buttons">
-    <a class="button" href="explore.html">← Back to Explore</a>
-  </div>
-
-</main>
-
 <footer>
-  🩺 Future Healers Initiative • See Yourself in Healthcare
+<p>Future Healers Initiative × Pre-Med Society 🩺</p>
 </footer>
 
 </body>
