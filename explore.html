@@ -3,291 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Explore Healthcare | Future Healers Initiative</title>
+<title>Explore Healthcare | FHI</title>
 
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: Arial, sans-serif;
-background: #f7fbfc;
-color: #17324d;
-line-height: 1.6;
-}
-
-header {
-background: white;
-padding: 18px 8%;
-border-bottom: 1px solid #e5eeee;
-}
-
-.logo {
-font-size: 1.2rem;
-font-weight: bold;
-text-align: center;
-margin-bottom: 12px;
-}
-
-.logo a {
-color: #17324d;
-text-decoration: none;
-}
-
-nav {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 18px;
-}
-
-nav a {
-text-decoration: none;
-color: #17324d;
-font-size: 0.9rem;
-font-weight: bold;
-}
-
-nav a:hover {
-color: #2b7a78;
-}
-
-.hero {
-text-align: center;
-padding: 70px 8%;
-background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
-}
-
-.hero .emoji {
-font-size: 2.5rem;
-margin-bottom: 10px;
-}
-
-.hero h1 {
-font-size: 2.7rem;
-margin-bottom: 15px;
-}
-
-.hero p {
-max-width: 650px;
-margin: auto;
-font-size: 1.1rem;
-color: #557080;
-}
-
-main {
-max-width: 1100px;
-margin: auto;
-padding: 60px 8%;
-}
-
-.intro {
-text-align: center;
-margin-bottom: 40px;
-}
-
-.intro p {
-color: #557080;
-margin-top: 8px;
-}
-
-.careers {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
-}
-
-.career-card {
-text-decoration: none;
-color: #17324d;
-display: block;
-background: white;
-padding: 25px;
-border-radius: 18px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.career-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-.career-card h2 {
-font-size: 1.2rem;
-margin-bottom: 10px;
-}
-
-.career-card p {
-color: #4b6475;
-}
-
-.available {
-margin-top: 15px;
-font-size: 0.8rem;
-font-weight: bold;
-color: #2b7a78;
-}
-
-.coming {
-margin-top: 15px;
-font-size: 0.8rem;
-font-weight: bold;
-color: #7b8a94;
-}
-
-
-/* QUIZ */
-
-.quiz {
-margin-top: 60px;
-background: #eef8f8;
-padding: 35px;
-border-radius: 20px;
-}
-
-.quiz h2 {
-margin-bottom: 8px;
-}
-
-.quiz-intro {
-color: #557080;
-margin-bottom: 25px;
-}
-
-.question {
-background: white;
-padding: 22px;
-border-radius: 15px;
-margin-top: 18px;
-}
-
-.question h3 {
-margin-bottom: 15px;
-font-size: 1rem;
-}
-
-.option {
-display: block;
-width: 100%;
-text-align: left;
-margin-top: 9px;
-padding: 12px 15px;
-border: 1px solid #d7e3e5;
-background: #f9fcfc;
-border-radius: 10px;
-color: #17324d;
-cursor: pointer;
-font-family: Arial, sans-serif;
-font-size: 0.95rem;
-}
-
-.option:hover {
-background: #e8f7f7;
-}
-
-.option.selected {
-background: #d9eeee;
-border-color: #2b7a78;
-font-weight: bold;
-}
-
-.quiz-button {
-display: block;
-margin: 28px auto 0;
-padding: 13px 25px;
-border: none;
-border-radius: 25px;
-background: #17324d;
-color: white;
-font-weight: bold;
-cursor: pointer;
-}
-
-.quiz-button:hover {
-background: #2b7a78;
-}
-
-#quiz-result {
-display: none;
-margin-top: 30px;
-background: white;
-padding: 28px;
-border-radius: 17px;
-}
-
-#quiz-result h2 {
-margin-bottom: 10px;
-}
-
-.result-career {
-padding: 15px;
-margin-top: 12px;
-background: #eef8f8;
-border-radius: 12px;
-}
-
-.result-career h3 {
-margin-bottom: 4px;
-}
-
-.result-career p {
-color: #557080;
-font-size: 0.9rem;
-}
-
-.quiz-note {
-font-size: 0.82rem;
-color: #6a7c87;
-margin-top: 18px;
-text-align: center;
-}
-
-footer {
-text-align: center;
-padding: 30px;
-background: #17324d;
-color: white;
-}
-
-@media (max-width: 700px) {
-
-header {
-padding: 16px 7%;
-}
-
-nav {
-gap: 10px;
-}
-
-main {
-padding: 50px 7%;
-}
-
-.hero h1 {
-font-size: 2.2rem;
-}
-
-.quiz {
-padding: 25px;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f8fb;color:#172b3a;line-height:1.6}
+nav{background:#0d2942;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{color:white;font-weight:800}
+nav a{color:#dcebf5;text-decoration:none;margin:0 6px;font-size:14px}
+.hero{text-align:center;padding:65px 20px;background:#e5f2f8}
+.hero h1{font-size:48px;color:#0d2942}
+.hero p{max-width:700px;margin:12px auto}
+section{max-width:1100px;margin:auto;padding:55px 20px}
+h2{font-size:32px;color:#0d2942;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:25px}
+.card{background:white;padding:22px;border-radius:17px;box-shadow:0 4px 15px rgba(13,41,66,.08)}
+.card h3{color:#0d5c82;margin-bottom:7px}
+.card a{color:#0d5c82;font-weight:bold;text-decoration:none}
+.quiz{background:white;padding:28px;border-radius:20px;box-shadow:0 4px 15px rgba(13,41,66,.08);margin-top:25px}
+.question{margin-bottom:24px}
+.question h3{margin-bottom:10px}
+label{display:block;background:#eef5f8;padding:10px;border-radius:9px;margin:6px 0;cursor:pointer}
+button{border:0;background:#0d5c82;color:white;padding:12px 18px;border-radius:10px;font-weight:bold;cursor:pointer}
+.result{margin-top:20px;padding:18px;background:#e8f4fa;border-radius:12px;display:none}
+footer{background:#0d2942;color:white;text-align:center;padding:30px}
+@media(max-width:700px){
+nav{justify-content:center}
+nav a{font-size:12px}
+.hero h1{font-size:38px}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-<a href="index.html">🩺 Future Healers Initiative</a>
-</div>
-
 <nav>
+<div class="logo">🩺 Future Healers Initiative</div>
+<div>
 <a href="index.html">Home</a>
 <a href="explore.html">Explore</a>
 <a href="learn.html">Learn & Play</a>
@@ -295,514 +47,198 @@ padding: 25px;
 <a href="involved.html">Get Involved</a>
 <a href="journey.html">Journey</a>
 <a href="impact.html">Impact</a>
+</div>
 </nav>
 
+<header class="hero">
+<h1>🩺 🧭 🔬 Explore Healthcare</h1>
+<p>
+There are WAY more healthcare careers than just doctor or nurse.
+Explore different paths and see what catches your attention.
+</p>
 </header>
 
+<section>
+<h2>👩‍⚕️ Healthcare Careers</h2>
 
-<section class="hero">
+<div class="grid">
 
-<div class="emoji">🩺 🧭 🔬</div>
+<div class="card">
+<h3>🩺 Surgeon</h3>
+<p>Uses surgical procedures to treat injuries, diseases, and other conditions.</p>
+<a href="surgeon.html">Explore now →</a>
+</div>
 
-<h1>Explore Healthcare</h1>
+<div class="card"><h3>🚑 Emergency Medicine Physician</h3><p>Works with patients who need immediate medical attention.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🧸 Pediatrician</h3><p>Provides medical care for children and adolescents.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🎗️ Oncologist</h3><p>Helps diagnose and treat cancer.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🩺 Nurse</h3><p>Provides patient care, education, monitoring, and support.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>👩‍⚕️ Physician Assistant</h3><p>Provides healthcare as part of a medical team.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🦴 Physical Therapist</h3><p>Helps people improve movement and recover physically.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🖐️ Occupational Therapist</h3><p>Helps people participate in everyday activities after illness or injury.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🩻 Radiologic Technologist</h3><p>Uses medical imaging equipment to help produce diagnostic images.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🔬 Medical Researcher</h3><p>Studies diseases, treatments, and new ways to improve healthcare.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>💊 Pharmacist</h3><p>Works with medications and helps patients use them safely.</p><strong>Coming soon</strong></div>
+<div class="card"><h3>🦷 Dentist</h3><p>Provides care for teeth, gums, and oral health.</p><strong>Coming soon</strong></div>
 
-<p>
-There isn't one way to become a future healer.
-Explore different careers and see what catches your interest.
-</p>
-
+</div>
 </section>
 
-
-<main>
-
-<div class="intro">
-
-<h2>Healthcare Careers</h2>
-
+<section>
+<h2>🧩 Career Match</h2>
 <p>
-From patient care to research and technology, healthcare has
-a place for lots of different interests and strengths.
+Not sure what sounds interesting? Try this quick quiz. It's not a test or a prediction of your
+future — it's just a starting point.
 </p>
-
-</div>
-
-
-<div class="careers">
-
-<a href="surgeon.html" class="career-card">
-<h2>🩺 Surgeon</h2>
-<p>Explore surgical medicine, procedures, teamwork, and patient care.</p>
-<div class="available">● Explore now</div>
-</a>
-
-
-<div class="career-card">
-<h2>🚑 Emergency Medicine Physician</h2>
-<p>Fast-paced medicine, problem-solving, and emergency care.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🧸 Pediatrician</h2>
-<p>Healthcare focused on infants, children, and adolescents.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🎗️ Oncologist</h2>
-<p>Cancer care, treatment, research, and supporting patients.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>👩‍⚕️ Nurse</h2>
-<p>Patient care, communication, teamwork, and clinical practice.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🩹 Physician Assistant</h2>
-<p>Working with patients as part of a healthcare team.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🦴 Physical Therapist</h2>
-<p>Movement, rehabilitation, injury recovery, and patient goals.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>👐 Occupational Therapist</h2>
-<p>Helping people participate in everyday activities.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🩻 Radiologic Technologist</h2>
-<p>Medical imaging and the technology used to help diagnose patients.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🔬 Medical Researcher</h2>
-<p>Investigating diseases and discovering new medical knowledge.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>💊 Pharmacist</h2>
-<p>Medications, patient education, and safe treatment.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-
-<div class="career-card">
-<h2>🦷 Dentist</h2>
-<p>Oral health, prevention, diagnosis, and treatment.</p>
-<div class="coming">Coming soon</div>
-</div>
-
-</div>
-
-
-<!-- CAREER QUIZ -->
 
 <div class="quiz">
 
-<h2>🧭 Which Healthcare Careers Might Fit You?</h2>
-
-<p class="quiz-intro">
-Answer a few questions based on what you actually enjoy.
-There are no right answers.
-</p>
-
+<form id="quiz">
 
 <div class="question">
-
-<h3>1. What sounds the most interesting?</h3>
-
-<button class="option" onclick="choose(this, 'q1', 'hands')">
-🩺 Doing hands-on work
-</button>
-
-<button class="option" onclick="choose(this, 'q1', 'people')">
-💬 Talking with and helping people
-</button>
-
-<button class="option" onclick="choose(this, 'q1', 'science')">
-🔬 Figuring out how things work
-</button>
-
-<button class="option" onclick="choose(this, 'q1', 'tech')">
-💻 Working with technology
-</button>
-
+<h3>1. What sounds most interesting?</h3>
+<label><input type="radio" name="q1" value="hands"> Hands-on work</label>
+<label><input type="radio" name="q1" value="people"> Working with people</label>
+<label><input type="radio" name="q1" value="science"> Science and research</label>
+<label><input type="radio" name="q1" value="tech"> Technology and imaging</label>
 </div>
-
 
 <div class="question">
-
-<h3>2. What kind of environment sounds interesting?</h3>
-
-<button class="option" onclick="choose(this, 'q2', 'fast')">
-🚑 Something fast-paced
-</button>
-
-<button class="option" onclick="choose(this, 'q2', 'longterm')">
-❤️ Building relationships with patients
-</button>
-
-<button class="option" onclick="choose(this, 'q2', 'lab')">
-🧪 A lab or research setting
-</button>
-
-<button class="option" onclick="choose(this, 'q2', 'movement')">
-🦴 A setting focused on movement and recovery
-</button>
-
+<h3>2. What environment sounds best?</h3>
+<label><input type="radio" name="q2" value="fast"> Fast-paced</label>
+<label><input type="radio" name="q2" value="relationships"> Building relationships</label>
+<label><input type="radio" name="q2" value="lab"> Lab/research</label>
+<label><input type="radio" name="q2" value="movement"> Movement and rehabilitation</label>
 </div>
-
 
 <div class="question">
-
-<h3>3. Which sounds more like you?</h3>
-
-<button class="option" onclick="choose(this, 'q3', 'problem')">
-🧩 I like solving problems
-</button>
-
-<button class="option" onclick="choose(this, 'q3', 'care')">
-🤝 I like taking care of people
-</button>
-
-<button class="option" onclick="choose(this, 'q3', 'details')">
-🔎 I notice small details
-</button>
-
-<button class="option" onclick="choose(this, 'q3', 'creative')">
-💡 I like finding different ways to do things
-</button>
-
+<h3>3. Which sounds most like you?</h3>
+<label><input type="radio" name="q3" value="problem"> Problem solving</label>
+<label><input type="radio" name="q3" value="care"> Caring and supporting</label>
+<label><input type="radio" name="q3" value="detail"> Paying attention to details</label>
+<label><input type="radio" name="q3" value="creative"> Creative thinking</label>
 </div>
-
 
 <div class="question">
-
-<h3>4. What topic would you rather learn about?</h3>
-
-<button class="option" onclick="choose(this, 'q4', 'body')">
-🫀 The human body
-</button>
-
-<button class="option" onclick="choose(this, 'q4', 'medicine')">
-💊 Medicines and treatments
-</button>
-
-<button class="option" onclick="choose(this, 'q4', 'imaging')">
-🩻 Medical imaging and technology
-</button>
-
-<button class="option" onclick="choose(this, 'q4', 'research')">
-🔬 Diseases and research
-</button>
-
+<h3>4. What topic interests you?</h3>
+<label><input type="radio" name="q4" value="body"> The human body</label>
+<label><input type="radio" name="q4" value="medicine"> Medicines</label>
+<label><input type="radio" name="q4" value="imaging"> Imaging</label>
+<label><input type="radio" name="q4" value="disease"> Diseases and research</label>
 </div>
-
 
 <div class="question">
-
-<h3>5. What sounds most rewarding?</h3>
-
-<button class="option" onclick="choose(this, 'q5', 'help')">
-❤️ Helping someone directly
-</button>
-
-<button class="option" onclick="choose(this, 'q5', 'solve')">
-🧠 Solving a difficult problem
-</button>
-
-<button class="option" onclick="choose(this, 'q5', 'discover')">
-🔬 Discovering something new
-</button>
-
-<button class="option" onclick="choose(this, 'q5', 'improve')">
-🦴 Helping someone get back to doing what they love
-</button>
-
+<h3>5. What sounds rewarding?</h3>
+<label><input type="radio" name="q5" value="help"> Directly helping someone</label>
+<label><input type="radio" name="q5" value="solve"> Solving a difficult problem</label>
+<label><input type="radio" name="q5" value="discover"> Discovering something new</label>
+<label><input type="radio" name="q5" value="recover"> Helping someone recover</label>
 </div>
 
+<button type="button" onclick="matchCareer()">Find My Matches →</button>
 
-<button class="quiz-button" onclick="showResults()">
-Show My Matches →
-</button>
+<div class="result" id="result"></div>
 
-
-<div id="quiz-result">
-
-<h2>🩺 Your Possible Matches</h2>
-
-<p>
-Based on your answers, these careers might be worth
-looking into:
-</p>
-
-<div id="results"></div>
-
-<p class="quiz-note">
-This isn't a test or a prediction of your future. It's just
-a starting point for exploring careers you might enjoy.
-</p>
-
+</form>
 </div>
-
-</div>
-
-</main>
-
+</section>
 
 <footer>
-
-<p>
-Future Healers Initiative • Pre-Med Society
-</p>
-
+<p>Future Healers Initiative × Pre-Med Society 🩺</p>
 </footer>
 
-
 <script>
+function matchCareer(){
 
-let answers = {};
-
-function choose(button, question, answer) {
-
-answers[question] = answer;
-
-let buttons = button.parentElement.querySelectorAll(".option");
-
-buttons.forEach(function(item) {
-item.classList.remove("selected");
+const answers=[1,2,3,4,5].map(n=>{
+const x=document.querySelector('input[name="q'+n+'"]:checked');
+return x?x.value:null;
 });
 
-button.classList.add("selected");
-
-}
-
-
-function showResults() {
-
-if (Object.keys(answers).length < 5) {
-
-alert("Answer all 5 questions first! 🩺");
-
+if(answers.includes(null)){
+alert("Answer all 5 questions first!");
 return;
-
 }
 
-let scores = {
-
-"Surgeon": 0,
-"Emergency Medicine Physician": 0,
-"Pediatrician": 0,
-"Oncologist": 0,
-"Nurse": 0,
-"Physical Therapist": 0,
-"Radiologic Technologist": 0,
-"Medical Researcher": 0,
-"Pharmacist": 0
-
+const scores={
+"Surgeon":0,
+"Emergency Medicine Physician":0,
+"Pediatrician":0,
+"Oncologist":0,
+"Nurse":0,
+"Physician Assistant":0,
+"Physical Therapist":0,
+"Occupational Therapist":0,
+"Radiologic Technologist":0,
+"Medical Researcher":0,
+"Pharmacist":0,
+"Dentist":0
 };
 
+answers.forEach(a=>{
 
-Object.values(answers).forEach(function(answer) {
-
-if (answer === "hands") {
-scores["Surgeon"] += 2;
-scores["Physical Therapist"] += 1;
+if(["hands","problem","body","solve"].includes(a)){
+scores["Surgeon"]++;
+scores["Emergency Medicine Physician"]++;
 }
 
-if (answer === "people") {
-scores["Nurse"] += 2;
-scores["Pediatrician"] += 2;
-scores["Oncologist"] += 1;
+if(["fast","help","problem"].includes(a)){
+scores["Emergency Medicine Physician"]++;
 }
 
-if (answer === "science") {
-scores["Medical Researcher"] += 2;
-scores["Oncologist"] += 1;
-scores["Pharmacist"] += 1;
+if(["people","relationships","care","help"].includes(a)){
+scores["Pediatrician"]++;
+scores["Nurse"]++;
+scores["Physician Assistant"]++;
 }
 
-if (answer === "tech") {
-scores["Radiologic Technologist"] += 2;
-scores["Medical Researcher"] += 1;
+if(["science","lab","discover","disease"].includes(a)){
+scores["Medical Researcher"]++;
+scores["Oncologist"]++;
 }
 
-if (answer === "fast") {
-scores["Emergency Medicine Physician"] += 2;
-scores["Surgeon"] += 1;
+if(["medicine"].includes(a)){
+scores["Pharmacist"]++;
+scores["Oncologist"]++;
 }
 
-if (answer === "longterm") {
-scores["Nurse"] += 2;
-scores["Pediatrician"] += 1;
-scores["Oncologist"] += 1;
+if(["tech","imaging"].includes(a)){
+scores["Radiologic Technologist"]++;
 }
 
-if (answer === "lab") {
-scores["Medical Researcher"] += 2;
-scores["Pharmacist"] += 1;
+if(["movement","recover"].includes(a)){
+scores["Physical Therapist"]++;
+scores["Occupational Therapist"]++;
 }
 
-if (answer === "movement") {
-scores["Physical Therapist"] += 2;
+if(["detail"].includes(a)){
+scores["Pharmacist"]++;
+scores["Radiologic Technologist"]++;
+scores["Dentist"]++;
 }
 
-if (answer === "problem") {
-scores["Surgeon"] += 1;
-scores["Emergency Medicine Physician"] += 1;
-scores["Medical Researcher"] += 1;
+if(["creative"].includes(a)){
+scores["Dentist"]++;
+scores["Occupational Therapist"]++;
 }
 
-if (answer === "care") {
-scores["Nurse"] += 1;
-scores["Pediatrician"] += 1;
-scores["Oncologist"] += 1;
-}
-
-if (answer === "details") {
-scores["Radiologic Technologist"] += 1;
-scores["Pharmacist"] += 1;
-scores["Surgeon"] += 1;
-}
-
-if (answer === "creative") {
-scores["Physical Therapist"] += 1;
-scores["Occupational Therapist"] = (scores["Occupational Therapist"] || 0) + 2;
-}
-
-if (answer === "body") {
-scores["Surgeon"] += 1;
-scores["Physical Therapist"] += 1;
-scores["Pediatrician"] += 1;
-}
-
-if (answer === "medicine") {
-scores["Pharmacist"] += 2;
-scores["Oncologist"] += 1;
-}
-
-if (answer === "imaging") {
-scores["Radiologic Technologist"] += 2;
-}
-
-if (answer === "research") {
-scores["Medical Researcher"] += 2;
-scores["Oncologist"] += 1;
-}
-
-if (answer === "help") {
-scores["Nurse"] += 1;
-scores["Pediatrician"] += 1;
-scores["Physical Therapist"] += 1;
-}
-
-if (answer === "solve") {
-scores["Surgeon"] += 1;
-scores["Emergency Medicine Physician"] += 1;
-}
-
-if (answer === "discover") {
-scores["Medical Researcher"] += 2;
-}
-
-if (answer === "improve") {
-scores["Physical Therapist"] += 2;
+if(["body"].includes(a)){
+scores["Dentist"]++;
 }
 
 });
 
+const sorted=Object.entries(scores)
+.sort((a,b)=>b[1]-a[1])
+.slice(0,3);
 
-let sorted = Object.entries(scores)
-.sort(function(a, b) {
-return b[1] - a[1];
-})
-.slice(0, 3);
-
-
-let descriptions = {
-
-"Surgeon":
-"Hands-on medicine, procedures, problem-solving, and teamwork.",
-
-"Emergency Medicine Physician":
-"Fast-paced patient care, quick decisions, and problem-solving.",
-
-"Pediatrician":
-"Long-term care and working with children and families.",
-
-"Oncologist":
-"Cancer care, complex medicine, research, and patient relationships.",
-
-"Nurse":
-"Direct patient care, communication, teamwork, and advocacy.",
-
-"Physical Therapist":
-"Movement, rehabilitation, and helping patients work toward physical goals.",
-
-"Radiologic Technologist":
-"Medical imaging, technology, and attention to detail.",
-
-"Medical Researcher":
-"Science, investigation, experiments, and discovering new information.",
-
-"Pharmacist":
-"Medications, science, patient education, and attention to detail.",
-
-"Occupational Therapist":
-"Helping people build skills for everyday activities."
-
-};
-
-
-let html = "";
-
-sorted.forEach(function(item) {
-
-let career = item[0];
-
-html +=
-'<div class="result-career">' +
-'<h3>' + career + '</h3>' +
-'<p>' + descriptions[career] + '</p>' +
-'</div>';
-
-});
-
-
-document.getElementById("results").innerHTML = html;
-
-document.getElementById("quiz-result").style.display = "block";
-
-document.getElementById("quiz-result").scrollIntoView({
-behavior: "smooth"
-});
-
+document.getElementById("result").style.display="block";
+document.getElementById("result").innerHTML=
+"<h3>🩺 Possible Matches</h3>"+
+sorted.map((x,i)=>"<p><strong>"+(i+1)+". "+x[0]+"</strong></p>").join("")+
+"<p style='margin-top:10px'>These are just ideas to explore — not a prediction of your future.</p>";
 }
-
 </script>
 
-  <script src="script.js"></script>
-  
 </body>
 </html>
