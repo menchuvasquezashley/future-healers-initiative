@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FHI Journey | Future Healers Initiative</title>
+
+<title>Your FHI Journey | Future Healers Initiative</title>
 
 <style>
 * {
@@ -22,33 +23,43 @@ line-height: 1.6;
 header {
 background: white;
 padding: 18px 8%;
-display: flex;
-justify-content: space-between;
-align-items: center;
 border-bottom: 1px solid #e5eeee;
 }
 
 .logo {
 font-size: 1.2rem;
 font-weight: bold;
+text-align: center;
+margin-bottom: 12px;
+}
+
+.logo a {
+color: #17324d;
+text-decoration: none;
+}
+
+nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 18px;
 }
 
 nav a {
 text-decoration: none;
 color: #17324d;
-margin-left: 18px;
 font-size: 0.9rem;
+font-weight: bold;
 }
 
-main {
-max-width: 1100px;
-margin: auto;
-padding: 70px 8%;
+nav a:hover {
+color: #2b7a78;
 }
 
 .hero {
 text-align: center;
-margin-bottom: 55px;
+padding: 70px 8%;
+background: linear-gradient(135deg, #e8f7f7, #f7fbfc);
 }
 
 .hero .emoji {
@@ -62,74 +73,146 @@ margin-bottom: 12px;
 }
 
 .hero p {
-max-width: 720px;
+max-width: 700px;
 margin: auto;
 color: #557080;
-font-size: 1.05rem;
 }
 
-.cards {
+main {
+max-width: 1050px;
+margin: auto;
+padding: 60px 8%;
+}
+
+.steps {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
-margin-top: 30px;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 18px;
 }
 
-.card {
+.step {
 background: white;
 padding: 25px;
 border-radius: 18px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.card h2 {
-font-size: 1.25rem;
-margin-bottom: 8px;
+.number {
+font-weight: bold;
+color: #2b7a78;
+font-size: 0.85rem;
 }
 
-.card p {
+.step h2 {
+margin: 8px 0;
+font-size: 1.25rem;
+}
+
+.step p {
 color: #557080;
 }
 
-.number {
-font-size: 2rem;
-font-weight: bold;
-margin-bottom: 8px;
+.points {
+margin-top: 50px;
+background: #17324d;
+color: white;
+padding: 35px;
+border-radius: 20px;
 }
 
-.checkpoint {
-margin-top: 50px;
+.points h2 {
+margin-bottom: 20px;
+}
+
+.point-row {
+display: flex;
+justify-content: space-between;
+padding: 10px 0;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.calculator {
+margin-top: 45px;
 background: #eef8f8;
 padding: 30px;
 border-radius: 18px;
 }
 
-.checkpoint h2 {
-margin-bottom: 10px;
-}
-
-.checkpoint p {
-color: #557080;
-}
-
-.questions {
-margin-top: 22px;
-}
-
-.questions li {
-margin-bottom: 8px;
-color: #557080;
-}
-
-.status {
-display: inline-block;
-margin-top: 18px;
-padding: 6px 12px;
-border-radius: 20px;
-background: #e8f7f7;
-color: #2b7a78;
-font-size: 0.8rem;
+.calculator label {
+display: block;
+margin-top: 15px;
 font-weight: bold;
+}
+
+.calculator input {
+width: 100%;
+padding: 11px;
+margin-top: 5px;
+border: 1px solid #ccdadd;
+border-radius: 10px;
+font-size: 1rem;
+}
+
+button {
+margin-top: 20px;
+padding: 12px 22px;
+border: none;
+border-radius: 25px;
+background: #17324d;
+color: white;
+font-weight: bold;
+cursor: pointer;
+}
+
+button:hover {
+background: #2b7a78;
+}
+
+#total {
+margin-top: 20px;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.checkpoint {
+margin-top: 45px;
+background: white;
+padding: 30px;
+border-radius: 18px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.checkpoint ul {
+margin: 18px 0 0 20px;
+color: #557080;
+}
+
+.badges {
+margin-top: 45px;
+}
+
+.badge-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 15px;
+margin-top: 20px;
+}
+
+.badge {
+background: white;
+padding: 20px;
+border-radius: 15px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.badge span {
+font-size: 2rem;
+}
+
+.badge p {
+font-weight: bold;
+margin-top: 8px;
 }
 
 footer {
@@ -141,22 +224,12 @@ color: white;
 
 @media (max-width: 700px) {
 
-header {
-flex-direction: column;
-gap: 12px;
-}
-
 nav {
-text-align: center;
-}
-
-nav a {
-margin: 0 5px;
-font-size: 0.8rem;
+gap: 10px;
 }
 
 main {
-padding: 55px 7%;
+padding: 50px 7%;
 }
 
 .hero h1 {
@@ -171,7 +244,7 @@ font-size: 2.2rem;
 <header>
 
 <div class="logo">
-🩺 Future Healers Initiative
+<a href="index.html">🩺 Future Healers Initiative</a>
 </div>
 
 <nav>
@@ -186,7 +259,6 @@ font-size: 2.2rem;
 
 </header>
 
-<main>
 
 <section class="hero">
 
@@ -195,88 +267,124 @@ font-size: 2.2rem;
 <h1>Your FHI Journey</h1>
 
 <p>
-Your healthcare journey starts with curiosity. Explore careers,
-try new things, serve your community, and build your own path.
+Your FHI journey isn't about checking boxes. It's about
+what you explore, what you try, who you help, and how you grow.
 </p>
 
 </section>
 
 
-<h2>🌱 How It Works</h2>
+<main>
 
-<div class="cards">
 
-<div class="card">
+<h2>🚀 How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
 <div class="number">01</div>
 <h2>Explore</h2>
-<p>
-Discover healthcare careers, meet professionals, and learn
-about different paths.
-</p>
+<p>Discover healthcare careers, people, and possibilities.</p>
 </div>
 
-<div class="card">
+<div class="step">
 <div class="number">02</div>
 <h2>Participate</h2>
-<p>
-Take part in FHI activities, challenges, workshops, and
-healthcare experiences.
-</p>
+<p>Join activities, workshops, challenges, and events.</p>
 </div>
 
-<div class="card">
+<div class="step">
 <div class="number">03</div>
 <h2>Serve</h2>
-<p>
-Use what you learn to participate in service projects and
-help your community.
-</p>
+<p>Use your time and skills to contribute to your community.</p>
 </div>
 
-<div class="card">
+<div class="step">
 <div class="number">04</div>
 <h2>Lead</h2>
-<p>
-Take initiative, help others, and become part of building
-the future of FHI.
-</p>
+<p>Take initiative and help create opportunities for others.</p>
 </div>
 
 </div>
 
 
-<h2 style="margin-top: 55px;">⭐ FHI Points</h2>
+<div class="points">
 
-<div class="cards">
+<h2>⭐ FHI Points</h2>
 
-<div class="card">
-<h2>Attend</h2>
-<p>
-Show up and participate in regular FHI meetings and activities.
-</p>
+<div class="point-row">
+<span>Attend a meeting</span>
+<strong>+1</strong>
 </div>
 
-<div class="card">
-<h2>Complete</h2>
-<p>
-Finish challenges, workshops, medical mysteries, and other
-FHI activities.
-</p>
+<div class="point-row">
+<span>Complete an FHI activity</span>
+<strong>+2</strong>
 </div>
 
-<div class="card">
-<h2>Serve</h2>
-<p>
-Participate in FHI service projects and community activities.
-</p>
+<div class="point-row">
+<span>Complete a challenge</span>
+<strong>+1</strong>
 </div>
 
-<div class="card">
-<h2>Lead</h2>
-<p>
-Help organize activities, support other students, or take
-on a leadership role.
+<div class="point-row">
+<span>Service</span>
+<strong>+3</strong>
+</div>
+
+<div class="point-row">
+<span>Leadership / helping</span>
+<strong>+3</strong>
+</div>
+
+<div class="point-row">
+<span>Healthcare workshop</span>
+<strong>+2</strong>
+</div>
+
+<div class="point-row">
+<span>Reflection</span>
+<strong>+1</strong>
+</div>
+
+<p style="margin-top:20px;">
+🎟️ Every 10 points = 1 raffle entry
 </p>
+
+</div>
+
+
+<div class="calculator">
+
+<h2>🧮 Calculate Your Points</h2>
+
+<label>Meetings attended</label>
+<input type="number" id="meetings" min="0" value="0">
+
+<label>FHI activities completed</label>
+<input type="number" id="activities" min="0" value="0">
+
+<label>Challenges completed</label>
+<input type="number" id="challenges" min="0" value="0">
+
+<label>Service activities</label>
+<input type="number" id="service" min="0" value="0">
+
+<label>Leadership/helping activities</label>
+<input type="number" id="leadership" min="0" value="0">
+
+<label>Healthcare workshops</label>
+<input type="number" id="workshops" min="0" value="0">
+
+<label>Reflections completed</label>
+<input type="number" id="reflections" min="0" value="0">
+
+<button onclick="calculatePoints()">
+Calculate →
+</button>
+
+<div id="total">
+Your points: 0
 </div>
 
 </div>
@@ -287,38 +395,56 @@ on a leadership role.
 <h2>📝 FHI Checkpoint</h2>
 
 <p>
-After activities, students can check in and reflect on their
-experience. Your feedback helps us understand what students
-actually enjoy and learn from.
+After activities, reflect on your experience.
 </p>
 
-<ul class="questions">
+<ul>
 
-<li>⭐ How much did you enjoy the activity? (1–5)</li>
+<li>How much did you enjoy the activity? (1–5)</li>
 
-<li>🧠 How much did you learn? (1–5)</li>
+<li>How much did you learn? (1–5)</li>
 
-<li>💡 What is one thing you learned or found interesting?</li>
+<li>What is one thing you learned or found interesting?</li>
 
-<li>🔁 Would you want to do something like this again?</li>
+<li>Would you want to do something like this again?</li>
 
 </ul>
-
-<span class="status">Coming Soon</span>
 
 </div>
 
 
-<div class="checkpoint">
+<div class="badges">
 
 <h2>🏅 Badges & Recognition</h2>
 
-<p>
-As FHI grows, students can work toward badges, certificates,
-and other recognition for participating, serving, and leading.
-</p>
+<div class="badge-grid">
 
-<span class="status">Coming Soon</span>
+<div class="badge">
+<span>🧭</span>
+<p>Explorer</p>
+</div>
+
+<div class="badge">
+<span>🩺</span>
+<p>Future Healer</p>
+</div>
+
+<div class="badge">
+<span>❤️</span>
+<p>Community Helper</p>
+</div>
+
+<div class="badge">
+<span>⭐</span>
+<p>Leader</p>
+</div>
+
+<div class="badge">
+<span>🔬</span>
+<p>Healthcare Explorer</p>
+</div>
+
+</div>
 
 </div>
 
@@ -332,6 +458,54 @@ Future Healers Initiative • Pre-Med Society
 </p>
 
 </footer>
+
+
+<script>
+
+function calculatePoints() {
+
+let meetings =
+Number(document.getElementById("meetings").value);
+
+let activities =
+Number(document.getElementById("activities").value);
+
+let challenges =
+Number(document.getElementById("challenges").value);
+
+let service =
+Number(document.getElementById("service").value);
+
+let leadership =
+Number(document.getElementById("leadership").value);
+
+let workshops =
+Number(document.getElementById("workshops").value);
+
+let reflections =
+Number(document.getElementById("reflections").value);
+
+
+let total =
+(meetings * 1) +
+(activities * 2) +
+(challenges * 1) +
+(service * 3) +
+(leadership * 3) +
+(workshops * 2) +
+(reflections * 1);
+
+
+let raffleEntries = Math.floor(total / 10);
+
+document.getElementById("total").innerHTML =
+"⭐ Your points: " + total +
+"<br><span style='font-size:1rem;'>🎟️ Raffle entries: " +
+raffleEntries + "</span>";
+
+}
+
+</script>
 
 </body>
 </html>
