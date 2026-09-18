@@ -624,89 +624,89 @@ Future Healers Initiative • Pre-Med Society
 </footer>
 
 
+<script src="script.js"></script>
+
 <script>
 
 let mysteryAnswer = null;
 
-
 function selectMystery(button, answer) {
 
-mysteryAnswer = answer;
+  mysteryAnswer = answer;
 
-let buttons =
-button.parentElement.querySelectorAll(".mystery-option");
+  let buttons =
+    button.parentElement.querySelectorAll(".mystery-option");
 
-buttons.forEach(function(item) {
-item.classList.remove("selected");
-});
+  buttons.forEach(function(item) {
+    item.classList.remove("selected");
+  });
 
-button.classList.add("selected");
-
+  button.classList.add("selected");
 }
 
 
 function checkMystery() {
 
-let result = document.getElementById("mystery-result");
+  let result = document.getElementById("mystery-result");
 
-if (mysteryAnswer === null) {
+  if (mysteryAnswer === null) {
+    result.style.display = "block";
+    result.innerHTML = "👀 Pick an answer first!";
+    return;
+  }
 
-result.style.display = "block";
+  result.style.display = "block";
 
-result.innerHTML =
-"👀 Pick an answer first!";
+  if (mysteryAnswer === "B") {
 
-return;
+    result.innerHTML =
+      "✅ Correct! Asking good questions is a big part of healthcare.";
 
-}
+    if (!localStorage.getItem("mystery001Completed")) {
+      addPoints(2);
+      localStorage.setItem("mystery001Completed", "yes");
+    }
 
+  } else {
 
-result.style.display = "block";
+    result.innerHTML =
+      "❌ Not quite! Think about which answer would give the healthcare team useful information.";
 
-
-if (mysteryAnswer === "B") {
-
-result.innerHTML =
-"✅ Correct! A healthcare team would want more information about the person's daily routine, sleep, food, stress, and other factors before trying to understand what might be going on. Asking good questions is a huge part of healthcare.";
-
-} else {
-
-result.innerHTML =
-"❌ Not quite! Think about which answer would actually give the healthcare team useful information about the student's situation. Try again!";
-
-}
-
+  }
 }
 
 
 function mythAnswer(button, isFact) {
 
-let result = document.getElementById("myth-result");
+  let result = document.getElementById("myth-result");
 
-let buttons =
-button.parentElement.querySelectorAll(".mystery-option");
+  let buttons =
+    button.parentElement.querySelectorAll(".mystery-option");
 
-buttons.forEach(function(item) {
-item.classList.remove("selected");
-});
+  buttons.forEach(function(item) {
+    item.classList.remove("selected");
+  });
 
-button.classList.add("selected");
+  button.classList.add("selected");
 
-result.style.display = "block";
+  result.style.display = "block";
 
+  if (!isFact) {
 
-if (!isFact) {
+    result.innerHTML =
+      "✅ Correct! Antibiotics work against bacteria, not viruses.";
 
-result.innerHTML =
-"✅ Correct! Antibiotics work against bacteria, not viruses such as the viruses that cause the common cold.";
+    if (!localStorage.getItem("myth001Completed")) {
+      addPoints(1);
+      localStorage.setItem("myth001Completed", "yes");
+    }
 
-} else {
+  } else {
 
-result.innerHTML =
-"❌ Not quite! Antibiotics work against bacteria, not viruses such as the viruses that cause the common cold.";
+    result.innerHTML =
+      "❌ Not quite! Antibiotics work against bacteria, not viruses.";
 
-}
-
+  }
 }
 
 </script>
